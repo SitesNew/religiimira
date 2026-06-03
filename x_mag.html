@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head> 
+       <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+   <title> Магия</title>
+   <meta name="title" content="Магия ">
+   <meta name="author" content="Валентин Приходько">
+   <meta name="keywords"       content="Магия "> 
+   <meta http-equiv="keywords" content="Магия  " >
+   <meta name="robots" content="index,follow">
+   <meta name="description"    content="Магия   ">
+   <meta name="copyright" content=" Copyright © 2010-2025 г.  , all rights reserved.">
+   <meta name="document-state" content="dynamic">
+   <meta name="revisit-after" content="1 days">
+   <meta name="classification" content=" Магия  ">
+   <meta name="category" content="Магия  ">
+   <meta http-equiv="language" content="russian">
+   <meta name="rating" content="general">
+   <meta name="distribution" content="global">
+   <meta name="resourse-type" content="document">
+<!>
+<! Таблица Стилей>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+
+<body onload="start(document.forms[0])" onunload="cleartids()">
+
+<Script language="JavaScript">
+function GoBack() {
+        if (confirm("Are you sure you want to go to the previous page?")) {
+                history.back()
+        }
+    }
+
+timestr = "00:00:00";
+tid = 0;
+pause = 0;
+var to;
+var bcount;
+var tcount;
+
+function writer(){
+document.write("test"); 
+}
+
+function time(n) {
+    tid=window.setTimeout("time(1)",to);
+    today = new Date()
+    if(today.getMinutes() < 10){ 
+        pad = "0"}
+    else  
+    pad = "";
+    if(today.getSeconds() < 10){ 
+        pads = "0"}
+    else  
+    pads = "";
+timestr=today.getHours()+":"+pad+today.getMinutes()+":"+pads+today.getSeconds();
+                f.result.value = timestr;
+                window.status = timestr;
+  window.clearTimeout(tid);
+  tid=window.setTimeout("time()",to);
+}
+
+function start(x) {
+  f=x;
+                to=60;
+  time(x);
+  }
+
+function cleartids() {
+ window.clearTimeout(tid);}
+</script>
+    <div id="header">
+         <! Заголовок страницы. >
+         <table align = center border=0 cellspacing=0 cellpadding=0 width="100%" bgcolor= white >
+                <tr>
+                    <td width = 175 align = left   valign=middle ><img src="./img_rel/nebo.gif" alt=" Образовательный портал <br> о религиях мира  " align = left width= 175  height= 100  > </td>
+                    <td width = *   align = center valign=middle ><a href="index.html
+" target =_self ><font color = #036484 size =+2 ><strong>Образовательный портал <br> о религиях мира. </strong></font></a></td>
+                                        <td width = 300 align = center valign=middle >
+                        <div align = "center">
+                             <Script language="JavaScript">
+                                     var now = new Date();
+                                     var days = new Array(' Воскресенье ',' Понедельник ',' Вторник ',' Среда ',' Четверг ',' Пятница ',' Суббота ');
+                                     var months = new Array(' Января ',' Февраля ',' Марта ',' Апреля ',' Мая ',' Июня ',' Июля ',' Августа ',' Сентябрь',' Октября  ',' Ноября ',' Декабря ');
+                                     var date = ((now.getDate()<10) ? "0" : "")+ now.getDate();
+                                     function fourdigits(number)	{ return (number < 1000) ? number + 1900 : number; }
+                                     today =  days[now.getDay()]+ " " +date + " " +months[now.getMonth()] + "  " +(fourdigits(now.getYear())) + " года";
+                                     document.write("<br>" +"<font color =#ffff99 >"+today+ "."+"</font>");
+                             </script>
+                             <form name="time">
+                                   <input type="text" size="14px" maxlength= 10 name="result"  onfocus="this.blur()"  style="text-align: center; font-size: 14px; color: #000000; font-weight:bold; border: 0px inset #000000; "> 
+                            </form>
+                        </div>
+                    </td>
+
+
+                </tr>
+         </table>
+    </div>
+
+    <div id="undernav">
+         <! Горизонтальное подменю.>
+         <a href="index.html
+" target = _self >Главная страница</a>  
+    </div>
+<!-- -->
+<div  align = center style="font-size:15px;  color:#000000;">
+        <!Links> 
+</div> 
+<!-- --> 
+<hr color = #036484 width =100% align = left>
+<table align = center  border=0 bordercolor = #036484  bgcolor =  #dee7ec width = 50%  ><tr><td align = center><div align = center>
+<font color =  #036484 size =+2> <strong> 
+Магия : 
+</strong> </font> </div></td></tr></table>
+<br>
+<noindex>
+<! Центральная часть страницы.>
+<div align = "justify" >
+<p>
+	ЧТО ТАКОЕ МАГИЯ
+<br>Откинь все свои стериотипы, чтобы понять что такое магия! Потому, что это не система. Магия вообще стоит за её Пределами. Все что пытается навязать системный вид, становится достоянием физического плана, а значит, становится доступным для восприятия «человеческого общества».
+<br>	ЗАКОНЫ МАГИИ
+<br>Законы магии не являются продуктом законотворчества, но, подобно физическим законам или музыкальной гармонии, выведены на основе многовековых практических наблюдений.
+<br>	МОДЕЛИ МАГИИ
+<br>На пути исследования возможностей новых, более эффективных техник в магии я обратил внимание на то, что весьма полезным оказывается системный подход к истории магии. В конце концов, маги всегда стремились описать теорию и практику магии на языке своего времени, т.е. с помощью разных моделей, соответствовавших тогдашним взглядам на мир.
+<br>	МАГИЧЕСКИЙ СЛОВАРЬ
+<br>Алгарт (праслав.) — реальный астрал, мир в астрале, который является проекцией материального мира. А. -это мир формообразований, которые имеют на Явь силу, т.к. являются ее программой. Все события, происходящие в Алгарте, обязательно происходят на Земле.
+<br>	МАГИЯ НАУКА БУДУЩЕГО
+<br>Магия - наука будущего? Странный вопрос, неправда ли? Но один из виднейших исследователь оккультизма Колин Уилсон утверждает, что это - именно так, что наша Вселенная куда старее и интереснее, чем мы с вами еще недавно представляли.
+<br>	ОСНОВЫ МАГИИ
+<br>Первый и самый главный шаг - научиться чувствовать энергию. Чувство энергии - это прекрасное чувство, оно должно быть у вас в солнечном сплетении, в голове, его должны чувствовать ваши глаза, кожа, вы должны его слышать. Всё, каждый предмет имеет свой набор метафизической энергии, каждый камень, каждая капля воздуха.
+<br>	ПЕРВЫЕ ШАГИ
+<br>Предлагаю несколько элементарных техник для воздействие на реальность. Главное условие их работы – не заморачиваться, быть естественным и уметь забывать так же быстро, как вспоминать. Злоупотреблять не советую, потому заранее всю ответственность за ваше их использование с себя снимаю.
+<br>	ГИПОТЕЗЫ
+<br>Интенсивные исследования человека и других биосистем, опубликованные "Вестником Академии наук" показывают, что вокруг любого биологического объекта благодаря его жизнедеятельности образуется сложная картина физических полей, несущих информацию о биосистеме.
+<br>	МАГИЯ БЕССМЕРТИЯ
+<br>Бессмертие – определение точки отсчёта. Каждое наше действие изменяет что-то внутри нас и что-то вне нас. Для смертного существа то, что внутри – преходяще и не имеет значения, это существо может только функционировать, обеспечивая существование большего.
+<br>	РАЗНЫЕ ПРЕДСТАВЛЕНИЯ О МАГИИ
+<br>Как это ни странно, но однозначный ответ на вопрос — что такое магия? — дать достаточно сложно. В разное время разными авторами давались различные определения магии, каждое из которых обычно делает акцент на одной из ее сторон. Отличие определений обусловлено еще и тем, что в разные времена под магией подразумевались различные области знания.
+</p>
+</div>
+</noindex>
+<! Подвал >
+<hr color = #036484 width =100% align = left>
+<!-- -->  
+<div  align = center style="font-size:15px;  color:#000000;">
+        <!Links_last> 
+</div>
+<!-- -->  
+ 
+<hr color = #036484 width =100% align = left>
+    <div id="footer">
+         <p align = center>
+                        Copyright © 2010-2025 г.  E-mail: <a href ="mailto:_pvi@ukr.net" target=_blank title ="Автора !!! Автора !!!." ><font color=" #036484"><strong>_pvi@ukr.net</strong></font></a>           <br>
+                     <div align = center style = "color: #000000; font-size: 14px; text-decoration: none; ">
+                                  Все материалы на этом информационном ресурсе предоставлены ИСКЛЮЧИТЕЛЬНО в ОЗНАКОМИТЕЛЬНЫХ, УЧЕБНЫХ и ОБРАЗОВАТЕЛЬНЫХ целях,
+                                 <br>администрация ресурса не претендует на их авторство и не несёт ответственности за их содержание. 
+                                  <br>Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+        </div>
+
+         </p>
+   </div>
+<hr color = #036484 width =100% align = left>
+<div align = center ><a  href="#"  target = _top ><img src="bn/str_up.png"  width= 25 height=25    align=center    alt=" " title = " "></a></div> 
+<hr color = #036484 width =100% align = left>
+</body>
+
+</html>
