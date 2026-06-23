@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Образовательный портал о религиях мира</title>
+    
+    <!-- Подключаем шрифты и иконки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* ====================================================
+           ВЕСЬ CSS ВНУТРИ HTML
+           ==================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #fcf9f5;
+            --bg-secondary: #f8f3ed;
+            --bg-card: #ffffff;
+            --bg-sidebar: #f5efe9;
+            --text-primary: #2c241e;
+            --text-secondary: #6b5d53;
+            --text-muted: #a39387;
+            --accent-gold: #c49b6c;
+            --accent-terracotta: #d4836a;
+            --accent-sage: #8ba888;
+            --accent-sky: #8bb5c9;
+            --accent-lavender: #b8a9c9;
+            --border-color: #e8ddd2;
+            --shadow-soft: 0 8px 30px rgba(150, 120, 100, 0.08);
+            --shadow-hover: 0 20px 50px rgba(150, 120, 100, 0.15);
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+            --gradient-warm: linear-gradient(145deg, #fcf6ef 0%, #f5ede4 100%);
+            --gradient-gold: linear-gradient(135deg, #c49b6c 0%, #e8c9a0 100%);
+            --link-green: #00CC00;
+            --link-blue: #036484;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        a {
+            color: var(--accent-terracotta);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* ===== ШАПКА ===== */
+        .header {
+            padding: 20px 0;
+            border-bottom: 3px solid var(--border-color);
+            background: rgba(252, 249, 245, 0.95);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(150, 120, 100, 0.06);
+        }
+
+        .header__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo i {
+            color: var(--accent-terracotta);
+            font-size: 2rem;
+        }
+
+        .logo-highlight {
+            color: var(--accent-terracotta);
+            font-style: italic;
+        }
+
+        .logo-sub {
+            font-size: 0.8rem;
+            font-family: var(--font-sans);
+            font-weight: 300;
+            color: var(--text-muted);
+            display: block;
+            margin-top: -4px;
+        }
+
+        .nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        .nav a.active,
+        .nav a:hover {
+            color: var(--text-primary);
+            border-bottom-color: var(--accent-terracotta);
+        }
+
+        .header__theme {
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            background: var(--bg-secondary);
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: 0.3s;
+            border: 1px solid var(--border-color);
+        }
+
+        .header__theme:hover {
+            color: var(--accent-terracotta);
+            transform: rotate(20deg);
+            border-color: var(--accent-terracotta);
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .burger span {
+            display: block;
+            width: 28px;
+            height: 2.5px;
+            background: var(--text-primary);
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        /* ===== ОСНОВНАЯ СЕТКА: 3 КОЛОНКИ ===== */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 280px 1fr 280px;
+            gap: 32px;
+            padding: 40px 0 60px;
+            min-height: 70vh;
+        }
+
+        /* ===== ЛЕВАЯ КОЛОНКА ===== */
+        .sidebar-left {
+            background: var(--bg-sidebar);
+            border-radius: 20px;
+            padding: 28px 20px;
+            border: 1px solid var(--border-color);
+            align-self: start;
+        }
+
+        .sidebar-left::-webkit-scrollbar {
+            width: 4px;
+        }
+        .sidebar-left::-webkit-scrollbar-thumb {
+            background: var(--accent-gold);
+            border-radius: 10px;
+        }
+
+        .sidebar-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar-title i {
+            color: var(--accent-terracotta);
+            font-size: 1.2rem;
+        }
+
+        /* ===== СТИЛИ ДЛЯ ССЫЛОК В БОКОВЫХ КОЛОНКАХ ===== */
+        .sidebar-links {
+            font-size: 0.92rem;
+            line-height: 1.8;
+        }
+
+        .sidebar-links hr {
+            border: none;
+            height: 2px;
+            background: var(--link-blue);
+            margin: 12px 0;
+            opacity: 0.5;
+        }
+
+        .sidebar-links .group-title {
+            color: var(--link-green);
+            font-weight: 600;
+            display: block;
+            padding: 4px 0;
+        }
+
+        .sidebar-links .group-title i {
+            margin-right: 6px;
+            color: var(--link-green);
+        }
+
+        .sidebar-links a {
+            color: var(--text-secondary);
+            transition: 0.3s;
+            display: inline-block;
+            padding: 2px 0;
+        }
+
+        .sidebar-links a:hover {
+            color: var(--accent-terracotta);
+            transform: translateX(4px);
+        }
+
+        .sidebar-links .link-indent {
+            display: inline-block;
+            padding-left: 20px;
+        }
+
+        .sidebar-links .link-indent-2 {
+            display: inline-block;
+            padding-left: 35px;
+        }
+
+        .sidebar-links .link-indent-3 {
+            display: inline-block;
+            padding-left: 50px;
+        }
+
+        /* ===== ЦЕНТРАЛЬНАЯ КОЛОНКА ===== */
+        .main-content {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 40px 36px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .content-hero {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .content-hero .icon-big {
+            font-size: 3.5rem;
+            color: var(--accent-terracotta);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .content-hero h1 {
+            font-family: var(--font-serif);
+            font-size: 2.0rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .content-hero .subtitle {
+            font-size: 1.0rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .content-section {
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .content-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .content-section h2 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .content-section h2 i {
+            color: var(--accent-terracotta);
+            font-size: 1.3rem;
+        }
+
+        .content-section h3 {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            margin: 24px 0 12px;
+            color: var(--text-primary);
+        }
+
+        .content-section p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: 1.0rem;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: var(--bg-secondary);
+            padding: 24px 28px;
+            border-radius: 16px;
+            border-left: 4px solid var(--accent-gold);
+            margin: 20px 0;
+        }
+
+        .highlight-box i {
+            color: var(--accent-terracotta);
+            margin-right: 10px;
+        }
+
+        .highlight-box.gold {
+            border-left-color: var(--accent-gold);
+            background: #f8f0e6;
+        }
+
+        .highlight-box.sage {
+            border-left-color: var(--accent-sage);
+            background: #f0f5ec;
+        }
+
+        .highlight-box.sky {
+            border-left-color: var(--accent-sky);
+            background: #eef4f7;
+        }
+
+        .highlight-box.dark-side {
+            border-left-color: #8a6a5a;
+            background: #f5ede8;
+        }
+
+        .highlight-box.dark-side i {
+            color: #8a6a5a;
+        }
+
+        .card-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .mini-card {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            transition: 0.3s;
+        }
+
+        .mini-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .mini-card h4 {
+            font-family: var(--font-serif);
+            font-size: 1.0rem;
+            margin-bottom: 6px;
+            color: var(--text-primary);
+        }
+
+        .mini-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+
+        .mini-card i {
+            color: var(--accent-terracotta);
+            margin-right: 8px;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .stat-item {
+            background: var(--bg-secondary);
+            padding: 16px 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-item .number {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-terracotta);
+        }
+
+        .stat-item .label {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .reference-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reference-list li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .reference-list li:last-child {
+            border-bottom: none;
+        }
+
+        .reference-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-size: 1rem;
+        }
+
+        .reference-list li.dark::before {
+            content: "◈";
+            color: #8a6a5a;
+        }
+
+        .person-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .person-item {
+            background: var(--bg-secondary);
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .person-item i {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+        }
+
+        .person-item .name {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .person-item .years {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .quote-block {
+            background: var(--gradient-warm);
+            padding: 30px;
+            border-radius: 16px;
+            margin: 30px 0;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .quote-block i {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            opacity: 0.5;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .quote-block p {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .quote-block footer {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        .quote-block.dark {
+            background: #f5ede8;
+            border-color: #d4c5b8;
+        }
+
+        /* ===== ПРАВАЯ КОЛОНКА ===== */
+        .sidebar-right {
+            background: var(--bg-sidebar);
+            border-radius: 20px;
+            padding: 28px 20px;
+            border: 1px solid var(--border-color);
+            align-self: start;
+        }
+
+        .sidebar-right::-webkit-scrollbar {
+            width: 4px;
+        }
+        .sidebar-right::-webkit-scrollbar-thumb {
+            background: var(--accent-sage);
+            border-radius: 10px;
+        }
+
+        /* ===== КНОПКА "НАВЕРХ" ===== */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-gold);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(196, 155, 108, 0.3);
+            transition: 0.4s ease;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .scroll-top-btn:hover {
+            background: var(--accent-terracotta);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 24px rgba(196, 155, 108, 0.4);
+            color: #fff;
+        }
+
+        .scroll-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* ===== ПОДВАЛ ===== */
+        .footer {
+            padding: 35px 0;
+            border-top: 3px solid var(--border-color);
+            background: var(--bg-primary);
+        }
+
+        .footer__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer__socials {
+            display: flex;
+            gap: 22px;
+        }
+
+        .footer__socials a {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            transition: 0.3s;
+        }
+
+        .footer__socials a:hover {
+            color: var(--accent-terracotta);
+            transform: translateY(-3px);
+        }
+
+        /* ===== АДАПТИВНОСТЬ ===== */
+        @media (max-width: 1200px) {
+            .main-grid {
+                grid-template-columns: 240px 1fr 240px;
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .sidebar-left,
+            .sidebar-right {
+                position: static;
+                max-height: none;
+                order: 2;
+            }
+
+            .main-content {
+                order: 1;
+            }
+
+            .sidebar-right {
+                order: 3;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+                width: 100%;
+                order: 3;
+                padding-top: 20px;
+            }
+
+            .nav.open {
+                display: block;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .header__theme {
+                margin-left: auto;
+                margin-right: 16px;
+            }
+
+            .main-content {
+                padding: 24px 20px;
+            }
+
+            .content-hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .card-grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .content-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .footer__inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .person-list {
+                grid-template-columns: 1fr;
+            }
+
+            .scroll-top-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 0.9rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .main-content {
+                padding: 18px 14px;
+            }
+
+            .content-hero h1 {
+                font-size: 1.4rem;
+            }
+
+            .quote-block p {
+                font-size: 1rem;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .scroll-top-btn {
+                width: 32px;
+                height: 32px;
+                font-size: 0.8rem;
+                bottom: 16px;
+                right: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ====================================================
+    ШАПКА
+    ==================================================== -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <div class="logo" id="logo">
+                <i class="fas fa-seedling"></i>
+                <div>
+                    <span>Religio<span class="logo-highlight">Scope</span></span>
+                    <span class="logo-sub">Образовательный портал</span>
+                </div>
+            </div>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li><a href="#about-religion" class="active">О религии</a></li>
+                    <li><a href="#history">История</a></li>
+                    <li><a href="#humanism">Гуманизм</a></li>
+                    <li><a href="#meaning">Смысл жизни</a></li>
+                    <li><a href="#non-believers">Для ищущих</a></li>
+                    <li><a href="#basics">Основы</a></li>
+                    <li><a href="#references">Ресурсы</a></li>
+                    <li><a href="#dark-history">Теневые страницы</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__theme" id="themeToggle" title="Переключить тему">
+                <i class="fas fa-moon"></i>
+            </div>
+
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ====================================================
+    КНОПКА "НАВЕРХ"
+    ==================================================== -->
+    <a href="#" id="scrollTopBtn" class="scroll-top-btn" title="Наверх">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- ====================================================
+    ОСНОВНАЯ СЕТКА: 3 КОЛОНКИ
+    ==================================================== -->
+    <div class="container">
+        <div class="main-grid">
+
+            <!-- ================================================
+            ЛЕВАЯ КОЛОНКА - РЕЛИГИИ ЗАПАДА (ЗАГЛУШКА)
+            ================================================ -->
+            <aside class="sidebar-left" id="sidebar-left">
+                <div class="sidebar-title">
+                    <i class="fas fa-globe-americas"></i>
+                    Религии Запада
+                </div>
+
+                <!-- 
+                    =============================================
+                    ВСТАВЬТЕ ВАШИ ССЫЛКИ СЮДА (ЛЕВОЕ ОКНО)
+                    =============================================
+                -->
+                <div class="sidebar-links">
+                    <!-- 
+                        ДЛЯ ЗАГОЛОВКОВ ГРУПП ИСПОЛЬЗУЙТЕ:
+                        <span class="group-title"><i class="fas fa-..."></i> Название группы</span>
+                        
+                        ДЛЯ РАЗДЕЛИТЕЛЕЙ:
+                        <hr>
+                        
+                        ДЛЯ ССЫЛОК (1-Й УРОВЕНЬ):
+                        <a href="путь_к_странице.html" target="_self">Название</a><br>
+                        
+                        ДЛЯ ССЫЛОК (С ОТСТУПОМ):
+                        <span class="link-indent"><a href="путь_к_странице.html" target="_self">- Название</a></span><br>
+                        
+                        ДЛЯ ССЫЛОК (С БОЛЬШИМ ОТСТУПОМ):
+                        <span class="link-indent-2"><a href="путь_к_странице.html" target="_self">- Название</a></span><br>
+                    -->
+
+                    <!-- ===== ПРИМЕР СТРУКТУРЫ (ЗАМЕНИТЕ НА ВАШИ ССЫЛКИ) ===== -->
+                    
+                    <hr>
+                    <span class="group-title"><i class="fas fa-cross"></i> Православные церкви:</span>
+                    <span class="link-indent"><a href="#" target="_self">- Албанская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Александрийская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Американская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Антиохийская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Болгарская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Грузинская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Иерусалимская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Кипрская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Константинополь</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Польская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Румынская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Русская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Белорусская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Китайская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Латвийская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Молдавская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Русская за границей</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Украинская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Эстонская (МП)</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Сербская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Чехословацкая</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Элладская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Критская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Синайская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Финляндская</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Японская</a></span><br>
+
+                    <hr>
+                    <span class="group-title"><i class="fas fa-church"></i> Протестантство:</span>
+                    <span class="link-indent"><a href="#" target="_self">- Адвентисты Седьмого Дня</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Англиканская церковь</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Баптизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Вальденсы</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Евангельские христиане</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Кальвинизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Квакеры</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Лютеранство</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Меннонизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Методизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Мормоны</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Пресвитерианство</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Пятидесятники</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Харизматы</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Посольство Божье</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Ученики Христа</a></span><br>
+
+                    <hr>
+                    <span class="group-title"><i class="fas fa-crown"></i> Католичество:</span>
+                    <span class="link-indent"><a href="#" target="_self">- Римско-католическая церковь</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Восточно-католические церкви</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Старокатолики</a></span><br>
+
+                    <hr>
+                    <span class="group-title"><i class="fas fa-star"></i> Другие направления:</span>
+                    <span class="link-indent"><a href="#" target="_self">- Богородичный центр</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Дети Бога (организация)</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Унитарии</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Свидетели Иеговы</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Христадельфиане</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Духоборы</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Молокане</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Новая церковь</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Толстовцы</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Субботники</a></span><br>
+
+                    <!-- ===== КОНЕЦ ПРИМЕРА ===== -->
+                    
+                    <hr>
+                    <div style="text-align: center; color: var(--text-muted); font-size: 0.85rem; padding: 10px 0;">
+                        <i class="fas fa-edit"></i> Замените ссылки на Ваши
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ================================================
+            ЦЕНТРАЛЬНАЯ КОЛОНКА - ГЛАВНЫЙ КОНТЕНТ (БЕЗ ИЗМЕНЕНИЙ)
+            ================================================ -->
+            <main class="main-content" id="main-content">
+                <!-- Герой -->
+                <div class="content-hero" id="hero-title">
+                    <span class="icon-big">☮️</span>
+                    <h1>Что такое религия <br>и зачем она людям?</h1>
+                    <p class="subtitle">
+                        Путешествие сквозь века и культуры в поисках ответа на главные вопросы бытия
+                    </p>
+                </div>
+
+                <!-- Раздел 1: Что такое религия -->
+                <section class="content-section" id="about-religion">
+                    <a name="about-religion"></a>
+                    <h2><i class="fas fa-question-circle"></i> Что такое религия?</h2>
+                    <p>
+                        <strong>Религия</strong> (от лат. <em>religio</em> — «связь, благочестие») — это не просто набор обрядов и догматов. 
+                        Это <strong>глубинная связь</strong> человека с чем-то бóльшим, чем он сам. Это попытка осмыслить своё место 
+                        в бесконечной вселенной.
+                    </p>
+
+                    <div class="highlight-box gold">
+                        <i class="fas fa-lightbulb"></i>
+                        <strong>Ключевая идея:</strong> Религия отвечает на три главных вопроса человечества: 
+                        «Откуда мы пришли?», «Зачем мы здесь?» и «Куда мы идём?». Она даёт <strong>смысл</strong> 
+                        и <strong>надежду</strong>.
+                    </div>
+
+                    <p>
+                        В разных культурах ответы на эти вопросы звучат по-разному, но все они объединены одним — 
+                        <strong>стремлением к гармонии</strong> с собой, с другими людьми и с миром.
+                    </p>
+
+                    <div class="card-grid-2">
+                        <div class="mini-card">
+                            <h4><i class="fas fa-heart"></i> Вера</h4>
+                            <p>Глубокое доверие к высшим силам, которое наполняет жизнь смыслом и уверенностью.</p>
+                        </div>
+                        <div class="mini-card">
+                            <h4><i class="fas fa-hands-helping"></i> Нравственность</h4>
+                            <p>Религия даёт моральные ориентиры, учит доброте, состраданию и справедливости.</p>
+                        </div>
+                        <div class="mini-card">
+                            <h4><i class="fas fa-users"></i> Общность</h4>
+                            <p>Вера объединяет людей в общины, создаёт чувство принадлежности и поддержки.</p>
+                        </div>
+                        <div class="mini-card">
+                            <h4><i class="fas fa-pray"></i> Смысл</h4>
+                            <p>Помогает переживать трудные моменты, дает надежду и внутреннюю опору.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Раздел 2: Исторический экскурс -->
+                <section class="content-section" id="history">
+                    <a name="history"></a>
+                    <h2><i class="fas fa-history"></i> Как появилась религия?</h2>
+                    <p>
+                        <strong>Самые древние религиозные практики</strong> возникли более 100 000 лет назад. 
+                        Первобытные люди верили в духов природы, почитали животных и явления природы. 
+                        Это было началом <strong>духовного пути</strong> человечества.
+                    </p>
+
+                    <div class="quote-block">
+                        <i class="fas fa-quote-left"></i>
+                        <p>«Человек — это единственное существо, которое ищет смысл там, где его, казалось бы, нет. 
+                        И в этом его величие.»</p>
+                        <footer>— Из философского трактата</footer>
+                    </div>
+
+                    <p>
+                        С развитием цивилизаций религии становились более сложными. Появились <strong>монотеизм</strong> 
+                        (вера в одного Бога), <strong>политеизм</strong> (вера во многих богов) и 
+                        <strong>нетеистические традиции</strong> (например, буддизм).
+                    </p>
+
+                    <ul class="reference-list">
+                        <li><strong>Иудаизм</strong> — одна из древнейших монотеистических религий (ок. 2000 лет до н.э.)</li>
+                        <li><strong>Буддизм</strong> — возник в VI веке до н.э. как путь освобождения от страданий</li>
+                        <li><strong>Христианство</strong> — появилось в I веке н.э., принесло идею всеобщей любви</li>
+                        <li><strong>Ислам</strong> — возник в VII веке н.э., провозгласил единство Бога и братство людей</li>
+                    </ul>
+                </section>
+
+                <!-- Раздел 3: Гуманизм религий -->
+                <section class="content-section" id="humanism">
+                    <a name="humanism"></a>
+                    <h2><i class="fas fa-hand-holding-heart" style="color: var(--accent-sage);"></i> Гуманизм религий: мудрость, мир и сострадание</h2>
+                    <p>
+                        <strong>В основе всех великих религий лежат одни и те же ценности:</strong> любовь к ближнему, 
+                        сострадание, забота о слабых и стремление к миру. Религии учат человека быть <strong>лучше</strong> 
+                        и видеть в каждом ближнем брата или сестру.
+                    </p>
+
+                    <div class="highlight-box sage">
+                        <i class="fas fa-leaf"></i>
+                        <strong>Главная заповедь всех религий:</strong> «Относись к другим так, как хочешь, чтобы относились к тебе». 
+                        Это <strong>золотое правило нравственности</strong> — основа гуманизма в любой вере.
+                    </div>
+
+                    <h3 style="color: var(--accent-terracotta);"><i class="fas fa-cross"></i> Гуманизм в христианстве</h3>
+                    <p>
+                        Христианство провозглашает <strong>безусловную любовь</strong> ко всем людям, независимо от их происхождения 
+                        и веры. Иисус Христос учил: <em>«Любите врагов ваших, благословляйте проклинающих вас»</em>. 
+                        Христианские заповеди призывают к <strong>милосердию, прощению и заботе о бедных</strong>.
+                    </p>
+                    <ul class="reference-list">
+                        <li><strong>Заповедь любви:</strong> «Возлюби ближнего твоего, как самого себя»</li>
+                        <li><strong>Милосердие:</strong> Помощь больным, голодным, странникам</li>
+                        <li><strong>Прощение:</strong> «Прощайте, и прощены будете»</li>
+                        <li><strong>Социальное служение:</strong> Благотворительные организации, больницы, приюты</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-sage);"><i class="fas fa-star-and-crescent"></i> Гуманизм в исламе</h3>
+                    <p>
+                        <strong>Ислам учит милосердию и справедливости.</strong> Коран многократно подчёркивает важность 
+                        заботы о сиротах, бедных и путниках. Пророк Мухаммед говорил: <em>«Лучший из людей — тот, кто приносит пользу людям»</em>. 
+                        В исламе запрещено принуждение в религии: <em>«Нет принуждения в вере»</em> (Коран, 2:256).
+                    </p>
+                    <ul class="reference-list">
+                        <li><strong>Милосердие:</strong> Одно из имён Аллаха — «Милостивый»</li>
+                        <li><strong>Забота о бедных:</strong> Закят (обязательная милостыня)</li>
+                        <li><strong>Запрет на убийство:</strong> «Не убивайте душу, которую Аллах запретил»</li>
+                        <li><strong>Справедливость:</strong> Равенство перед Богом всех людей</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-sky);"><i class="fas fa-star-of-david"></i> Гуманизм в иудаизме</h3>
+                    <p>
+                        <strong>Иудаизм — религия справедливости и социальной ответственности.</strong> Тора предписывает 
+                        заботиться о вдовах, сиротах и бедных. Важнейшая заповедь: <em>«Люби ближнего твоего, как самого себя»</em> 
+                        (Левит 19:18). Иудаизм учит, что каждый человек создан по образу Божьему и достоин уважения.
+                    </p>
+                    <ul class="reference-list">
+                        <li><strong>Цдака:</strong> Справедливость и благотворительность</li>
+                        <li><strong>Тикун олам:</strong> Исправление мира — ответственность каждого</li>
+                        <li><strong>Уважение к ближнему:</strong> Запрет на злословие и унижение</li>
+                        <li><strong>Правосудие:</strong> Равенство всех перед законом</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-gold);"><i class="fas fa-dharmachakra"></i> Гуманизм в буддизме</h3>
+                    <p>
+                        <strong>Буддизм — это путь сострадания и ненасилия.</strong> Первая заповедь буддизма: 
+                        <em>«Не причиняй вреда живым существам»</em>. Будда учил, что все существа стремятся к счастью 
+                        и заслуживают сочувствия. <strong>Метта</strong> (любящая доброта) — одна из главных практик буддизма.
+                    </p>
+                    <ul class="reference-list">
+                        <li><strong>Ненасилие (Ахимса):</strong> Отказ от причинения вреда</li>
+                        <li><strong>Сострадание (Каруна):</strong> Глубокое сопереживание всем живым существам</li>
+                        <li><strong>Равностность (Упеккха):</strong> Отсутствие привязанности и отвращения</li>
+                        <li><strong>Мудрость (Паннья):</strong> Понимание взаимосвязи всех вещей</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-terracotta);"><i class="fas fa-om"></i> Гуманизм в индуизме</h3>
+                    <p>
+                        <strong>Индуизм — это путь единства и гармонии.</strong> Все существа — проявления единого 
+                        Божественного. Индуизм учит уважению ко всем формам жизни и признанию <strong>святости каждой души</strong>. 
+                        Йога и медитация помогают познать себя и соединиться с миром.
+                    </p>
+                    <ul class="reference-list">
+                        <li><strong>Ахимса:</strong> Ненасилие и уважение ко всему живому</li>
+                        <li><strong>Васудайва кутумбакам:</strong> «Вся вселенная — одна семья»</li>
+                        <li><strong>Карма-йога:</strong> Служение другим без привязанности к результату</li>
+                        <li><strong>Бхакти-йога:</strong> Путь любви и преданности Богу</li>
+                    </ul>
+
+                    <h3 style="color: var(--accent-sky);"><i class="fas fa-torii-gate"></i> Гуманизм в синтоизме</h3>
+                    <p>
+                        <strong>Синтоизм учит гармонии с природой и предками.</strong> Вся природа священна, и человек — её часть. 
+                        Синтоизм подчёркивает <strong>чистоту сердца, искренность и уважение к традициям</strong>.
+                    </p>
+                    <ul class="reference-list">
+                        <li><strong>Макото:</strong> Искренность и правдивость</li>
+                        <li><strong>Мусуби:</strong> Гармоничное взаимодействие со всем сущим</li>
+                        <li><strong>Уважение к природе:</strong> Священные рощи, горы, водопады</li>
+                        <li><strong>Почитание предков:</strong> Связь поколений</li>
+                    </ul>
+
+                    <div class="highlight-box gold" style="margin-top: 30px;">
+                        <i class="fas fa-balance-scale"></i>
+                        <strong>Что объединяет все религии?</strong><br>
+                        Все они учат <strong>добру, состраданию, справедливости и уважению</strong>. 
+                        Разница лишь в форме, но суть одна: <strong>помогать ближним и искать свет внутри себя</strong>.
+                    </div>
+
+                    <div class="card-grid-2">
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-terracotta);">
+                            <h4><i class="fas fa-heart" style="color: var(--accent-terracotta);"></i> Христианство</h4>
+                            <p><strong>«Возлюби ближнего твоего, как самого себя»</strong> — основа нравственности.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sage);">
+                            <h4><i class="fas fa-heart" style="color: var(--accent-sage);"></i> Ислам</h4>
+                            <p><strong>«Никто из вас не уверует, пока не пожелает брату своему того же, что и себе»</strong></p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sky);">
+                            <h4><i class="fas fa-heart" style="color: var(--accent-sky);"></i> Буддизм</h4>
+                            <p><strong>«Не причиняй вреда живым существам»</strong> — основа сострадания.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-gold);">
+                            <h4><i class="fas fa-heart" style="color: var(--accent-gold);"></i> Иудаизм</h4>
+                            <p><strong>«Не делай другим того, что ненавистно тебе»</strong> — золотое правило.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Раздел 4: Место человека в мире -->
+                <section class="content-section" id="meaning">
+                    <a name="meaning"></a>
+                    <h2><i class="fas fa-user-circle"></i> Какое место занимает человек?</h2>
+                    <p>
+                        В каждой религии человек занимает <strong>уникальное положение</strong>. Он не просто часть природы — 
+                        он <strong>со-творец</strong>, способный менять мир к лучшему.
+                    </p>
+
+                    <div class="highlight-box sky" style="border-left-color: var(--accent-sky);">
+                        <i class="fas fa-leaf" style="color: var(--accent-sky);"></i>
+                        <strong>Взгляд на человека:</strong> Мы не случайные существа в бездушной вселенной. 
+                        Мы — <strong>часть великого замысла</strong>, носители разума, любви и ответственности 
+                        перед будущим.
+                    </div>
+
+                    <div class="card-grid-2">
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-terracotta);">
+                            <h4>🌱 <span style="color: var(--accent-terracotta);">Ученик</span></h4>
+                            <p>Человек учится всю жизнь, приближаясь к мудрости и совершенству.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sky);">
+                            <h4>🌊 <span style="color: var(--accent-sky);">Проводник</span></h4>
+                            <p>Мы проводим божественный свет в мир через добрые дела и заботу.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-gold);">
+                            <h4>🔥 <span style="color: var(--accent-gold);">Творец</span></h4>
+                            <p>Каждый из нас создаёт свою реальность мыслями, словами и поступками.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sage);">
+                            <h4>❤️ <span style="color: var(--accent-sage);">Друг</span></h4>
+                            <p>Мы призваны быть опорой друг для друга, проявлять сострадание и любовь.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-block" style="background: var(--bg-card); border: 2px solid var(--border-color);">
+                        <p style="font-family: var(--font-sans); font-style: normal; font-size: 1.1rem;">
+                            <i class="fas fa-star" style="color: var(--accent-gold);"></i>
+                            Вне зависимости от веры, все религии учат одному: 
+                            <strong>человек ценен сам по себе</strong>, его жизнь имеет смысл, 
+                            а его душа стремится к свету.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Раздел 5: Для тех, кто потерял веру -->
+                <section class="content-section" id="non-believers">
+                    <a name="non-believers"></a>
+                    <h2><i class="fas fa-hand-holding-heart"></i> Для тех, кто ищет свой путь</h2>
+                    <p>
+                        <strong>Вера — это не обязательство, а личный выбор.</strong> 
+                        Мир устроен так, что каждый человек волен искать истину там, где чувствует отклик. 
+                        Если вы сомневаетесь или потеряли веру — это <strong>нормально</strong>. 
+                        Вот несколько философских направлений, которые помогают людям осмысливать жизнь без традиционной религии:
+                    </p>
+
+                    <div class="card-grid-2">
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sky);">
+                            <h4><i class="fas fa-atom"></i> Атеизм</h4>
+                            <p>Отсутствие веры в сверхъестественное. Мир познаваем через науку и разум. Человек сам творит свою судьбу.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-lavender);">
+                            <h4><i class="fas fa-question"></i> Агностицизм</h4>
+                            <p>Позиция, что существование Бога невозможно доказать или опровергнуть. Это честный взгляд на границы познания.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-gold);">
+                            <h4><i class="fas fa-cubes"></i> Материализм</h4>
+                            <p>Единственная реальность — материя. Сознание — продукт работы мозга. Смысл жизни в самореализации и счастье.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-terracotta);">
+                            <h4><i class="fas fa-brain"></i> Идеализм</h4>
+                            <p>Первична идея, дух, сознание. Материя — лишь отражение высшего разума. Человек — мыслящая частица вселенной.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sage);">
+                            <h4><i class="fas fa-search"></i> Скептицизм</h4>
+                            <p>Критическое отношение к любым утверждениям. Важно проверять и сомневаться — так рождается истина.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid #8e7a6b;">
+                            <h4><i class="fas fa-ban"></i> Нигилизм</h4>
+                            <p>Отрицание объективного смысла. Однако нигилизм может стать отправной точкой для создания своих собственных ценностей.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid #b87a6b;">
+                            <h4><i class="fas fa-smile-wink"></i> Цинизм</h4>
+                            <p>Недоверие к искренности людских поступков. Но цинизм — это защита, за которой часто скрывается чуткая душа.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-gold);">
+                            <h4><i class="fas fa-balance-scale"></i> Нравственность</h4>
+                            <p>Даже без религии можно быть нравственным человеком. Доброта, честность и сострадание — универсальные ценности.</p>
+                        </div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sky);">
+                            <h4><i class="fas fa-heart"></i> Совесть</h4>
+                            <p>Внутренний голос, который помогает отличать добро от зла. Совесть не требует религии — она врождённая.</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-box gold" style="border-left-color: var(--accent-sky);">
+                        <i class="fas fa-sun" style="color: var(--accent-gold);"></i>
+                        <strong>Главное:</strong> Путь к истине у каждого свой. Кто-то находит её в храме, кто-то — в науке, 
+                        кто-то — в искусстве, а кто-то — в тишине собственного сердца. 
+                        <strong>Не бойтесь искать</strong> — это и есть главное приключение жизни.
+                    </div>
+                </section>
+
+                <!-- Раздел 6: Основы мировых религий -->
+                <section class="content-section" id="basics">
+                    <a name="basics"></a>
+                    <h2><i class="fas fa-globe"></i> Основы мировых религий</h2>
+
+                    <h3><i class="fas fa-users" style="color: var(--accent-terracotta);"></i> Количество последователей</h3>
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <div class="number">2.4 млрд</div>
+                            <div class="label">Христианство</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">1.9 млрд</div>
+                            <div class="label">Ислам</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">1.2 млрд</div>
+                            <div class="label">Индуизм</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">520 млн</div>
+                            <div class="label">Буддизм</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">15 млн</div>
+                            <div class="label">Иудаизм</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">~1.2 млрд</div>
+                            <div class="label">Неверующие / другие</div>
+                        </div>
+                    </div>
+
+                    <h3><i class="fas fa-book" style="color: var(--accent-terracotta);"></i> Священные книги</h3>
+                    <ul class="reference-list">
+                        <li><strong>Библия</strong> — священное писание христиан (Ветхий и Новый Завет)</li>
+                        <li><strong>Коран</strong> — главная книга ислама, откровение пророка Мухаммеда</li>
+                        <li><strong>Тора</strong> (Пятикнижие) — основа иудаизма, часть Ветхого Завета</li>
+                        <li><strong>Талмуд</strong> — свод законов и традиций иудаизма</li>
+                        <li><strong>Веды</strong> — древнейшие священные тексты индуизма</li>
+                        <li><strong>Трипитака</strong> (Палийский канон) — буддийское священное писание</li>
+                        <li><strong>Авеста</strong> — священные тексты зороастризма</li>
+                        <li><strong>Гуру Грантх Сахиб</strong> — священная книга сикхизма</li>
+                    </ul>
+
+                    <h3><i class="fas fa-calendar-check" style="color: var(--accent-terracotta);"></i> Главные праздники</h3>
+                    <ul class="reference-list">
+                        <li><strong>Христианство:</strong> Рождество (25 декабря/7 января), Пасха, Крещение, Троица</li>
+                        <li><strong>Ислам:</strong> Ураза-байрам (Ид аль-Фитр), Курбан-байрам (Ид аль-Адха), Мавлид</li>
+                        <li><strong>Иудаизм:</strong> Рош ха-Шана (Новый год), Йом-Киппур (Судный день), Песах (Пасха), Ханука</li>
+                        <li><strong>Буддизм:</strong> Весак (день рождения Будды), Асандха Пуджа, Упосатха</li>
+                        <li><strong>Индуизм:</strong> Дивали (праздник огней), Холи (фестиваль красок), Наваратри</li>
+                    </ul>
+
+                    <h3><i class="fas fa-praying-hands" style="color: var(--accent-terracotta);"></i> Основные обряды</h3>
+                    <ul class="reference-list">
+                        <li><strong>Христианство:</strong> Крещение, причастие (евхаристия), венчание, исповедь, соборование</li>
+                        <li><strong>Ислам:</strong> Шахада (символ веры), намаз (молитва), закят (милостыня), ураза (пост), хадж (паломничество)</li>
+                        <li><strong>Иудаизм:</strong> Брит-мила (обрезание), бар-мицва, свадьба, суббота (Шаббат)</li>
+                        <li><strong>Буддизм:</strong> Медитация, чтение сутр, подношения в храмах, ретриты</li>
+                        <li><strong>Индуизм:</strong> Пуджа (ритуал почитания), священные омовения в Ганге, йога</li>
+                    </ul>
+
+                    <h3><i class="fas fa-crown" style="color: var(--accent-terracotta);"></i> Папы Римские (избранные)</h3>
+                    <div class="person-list">
+                        <div class="person-item">
+                            <i class="fas fa-pope"></i>
+                            <div><span class="name">Франциск</span> <span class="years">(2013 — н.в.)</span></div>
+                        </div>
+                        <div class="person-item">
+                            <i class="fas fa-pope"></i>
+                            <div><span class="name">Бенедикт XVI</span> <span class="years">(2005—2013)</span></div>
+                        </div>
+                        <div class="person-item">
+                            <i class="fas fa-pope"></i>
+                            <div><span class="name">Иоанн Павел II</span> <span class="years">(1978—2005)</span></div>
+                        </div>
+                        <div class="person-item">
+                            <i class="fas fa-pope"></i>
+                            <div><span class="name">Павел VI</span> <span class="years">(1963—1978)</span></div>
+                        </div>
+                    </div>
+
+                    <h3><i class="fas fa-church" style="color: var(--accent-terracotta);"></i> Патриархи Русской православной церкви</h3>
+                    <div class="person-list">
+                        <div class="person-item">
+                            <i class="fas fa-orthodox-cross"></i>
+                            <div><span class="name">Кирилл</span> <span class="years">(2009 — н.в.)</span></div>
+                        </div>
+                        <div class="person-item">
+                            <i class="fas fa-orthodox-cross"></i>
+                            <div><span class="name">Алексий II</span> <span class="years">(1990—2008)</span></div>
+                        </div>
+                        <div class="person-item">
+                            <i class="fas fa-orthodox-cross"></i>
+                            <div><span class="name">Пимен</span> <span class="years">(1971—1990)</span></div>
+                        </div>
+                        <div class="person-item">
+                            <i class="fas fa-orthodox-cross"></i>
+                            <div><span class="name">Алексий I</span> <span class="years">(1945—1970)</span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Раздел 7: Ссылки и ресурсы -->
+                <section class="content-section" id="references">
+                    <a name="references"></a>
+                    <h2><i class="fas fa-link"></i> Полезные ресурсы</h2>
+                    <p>
+                        <strong>Официальные сайты и онлайн-библиотеки</strong> для углублённого изучения религий и священных текстов:
+                    </p>
+
+                    <h3><i class="fas fa-globe" style="color: var(--accent-terracotta);"></i> Официальные сайты</h3>
+                    <ul class="reference-list">
+                        <li><a href="https://www.vatican.va" target="_blank">Ватикан</a> — официальный сайт Святого Престола</li>
+                        <li><a href="https://www.patriarchia.ru" target="_blank">Русская православная церковь</a> — официальный сайт РПЦ</li>
+                        <li><a href="https://www.islamicrelief.org" target="_blank">Islamic Relief</a> — международная исламская организация</li>
+                        <li><a href="https://www.chabad.org" target="_blank">Chabad</a> — иудаизм, образование и община</li>
+                        <li><a href="https://www.buddhanet.net" target="_blank">BuddhaNet</a> — буддийский образовательный портал</li>
+                        <li><a href="https://www.hinduismtoday.com" target="_blank">Hinduism Today</a> — индуизм, культура и философия</li>
+                    </ul>
+
+                    <h3><i class="fas fa-book-open" style="color: var(--accent-terracotta);"></i> Священные тексты онлайн</h3>
+                    <ul class="reference-list">
+                        <li><a href="https://www.bibleonline.ru" target="_blank">Библия онлайн</a> — Синодальный перевод</li>
+                        <li><a href="https://quran.com" target="_blank">Коран</a> — на арабском и с переводами</li>
+                        <li><a href="https://www.torah.by" target="_blank">Тора</a> — на русском языке</li>
+                        <li><a href="https://www.sacred-texts.com" target="_blank">Sacred Texts</a> — крупнейшая библиотека священных книг мира</li>
+                        <li><a href="https://www.buddhist-texts.org" target="_blank">Буддийские тексты</a> — сутры и комментарии</li>
+                        <li><a href="https://www.vedictexts.org" target="_blank">Веды</a> — древние индийские писания</li>
+                    </ul>
+
+                    <h3><i class="fas fa-graduation-cap" style="color: var(--accent-terracotta);"></i> Образовательные ресурсы</h3>
+                    <ul class="reference-list">
+                        <li><a href="https://www.khanacademy.org/humanities/world-history" target="_blank">Khan Academy — История мировых религий</a></li>
+                        <li><a href="https://www.coursera.org/courses?query=religion" target="_blank">Coursera — Курсы по религиоведению</a></li>
+                        <li><a href="https://www.bbc.co.uk/religion" target="_blank">BBC Religion — Религиозные темы и аналитика</a></li>
+                        <li><a href="https://www.pewresearch.org/topic/religion/" target="_blank">Pew Research — Статистика и исследования религии</a></li>
+                    </ul>
+
+                    <div class="highlight-box gold">
+                        <i class="fas fa-heart" style="color: var(--accent-terracotta);"></i>
+                        <strong>Напутствие:</strong> Пусть ваше путешествие в мир религий будет увлекательным, 
+                        познавательным и вдохновляющим. Помните: <strong>знание — свет, а терпимость — мудрость.</strong>
+                    </div>
+                </section>
+
+                <!-- Раздел 8: Теневые страницы (в самом конце) -->
+                <section class="content-section" id="dark-history">
+                    <a name="dark-history"></a>
+                    <h2><i class="fas fa-skull" style="color: #8a6a5a;"></i> Теневые страницы истории религий</h2>
+                    <p style="font-size: 1.05rem;">
+                        <strong>Честный взгляд на историю</strong> требует признания, что религия, как и любое человеческое явление, 
+                        имеет не только светлые, но и тёмные страницы. Это не отрицает её ценности, но помогает увидеть 
+                        <strong>полную картину</strong> и извлечь уроки для будущего.
+                    </p>
+
+                    <div class="quote-block dark">
+                        <i class="fas fa-quote-left"></i>
+                        <p>«История религий — это история величия человеческого духа и его падений. 
+                        Только признавая обе стороны, мы можем двигаться вперёд.»</p>
+                        <footer>— Из исторического очерка</footer>
+                    </div>
+
+                    <div class="highlight-box dark-side">
+                        <i class="fas fa-balance-scale" style="color: #8a6a5a;"></i>
+                        <strong>Важно понимать:</strong> Теневые страницы — это не приговор религии, а <strong>урок для человечества</strong>. 
+                        Любая идея, возведённая в абсолют, может быть искажена. Настоящая вера — это <strong>любовь, терпимость и уважение</strong>.
+                    </div>
+
+                    <h3 style="color: #8a6a5a;"><i class="fas fa-fire"></i> Борьба с язычеством</h3>
+                    <p>
+                        <strong>Христианизация Европы</strong> часто сопровождалась насильственным уничтожением языческих святилищ, 
+                        капищ и священных рощ. Варвары, принимавшие христианство, нередко вырубали священные дубы германцев 
+                        и разрушали храмы славянских богов.
+                    </p>
+                    <ul class="reference-list">
+                        <li class="dark"><strong>VIII–X века:</strong> Карл Великий насильно крестил саксов, казнив тысячи сопротивлявшихся</li>
+                        <li class="dark"><strong>988 год:</strong> Крещение Руси — языческие идолы сбрасывались в реки, народ крестили принудительно</li>
+                        <li class="dark"><strong>XIII век:</strong> Орден меченосцев уничтожал языческие племена в Прибалтике</li>
+                    </ul>
+
+                    <h3 style="color: #8a6a5a;"><i class="fas fa-gavel"></i> Инквизиция</h3>
+                    <p>
+                        <strong>Святая инквизиция</strong> (XII–XIX века) — церковный суд для борьбы с ересями. Только в Испании 
+                        за 300 лет через инквизицию прошло более <strong>150 000 человек</strong>, тысячи были сожжены на кострах.
+                    </p>
+                    <ul class="reference-list">
+                        <li class="dark"><strong>1231 год:</strong> Папа Григорий IX учредил инквизицию как постоянный орган</li>
+                        <li class="dark"><strong>1478 год:</strong> Испанская инквизиция — одна из самых жестоких</li>
+                        <li class="dark"><strong>1600 год:</strong> Сожжён Джордано Бруно за идеи о бесконечности вселенной</li>
+                        <li class="dark"><strong>1633 год:</strong> Галилей отрёкся от гелиоцентрической системы под угрозой пыток</li>
+                    </ul>
+
+                    <h3 style="color: #8a6a5a;"><i class="fas fa-cross"></i> Крестовые походы</h3>
+                    <p>
+                        <strong>Крестовые походы</strong> (1095–1291) — военные кампании под религиозными лозунгами. 
+                        Они привели к массовым убийствам мусульман, евреев и даже христиан-еретиков.
+                    </p>
+                    <ul class="reference-list">
+                        <li class="dark"><strong>1099 год:</strong> Взятие Иерусалима — уничтожено 30 000 мирных жителей</li>
+                        <li class="dark"><strong>1204 год:</strong> Четвёртый крестовый поход — разграбление Константинополя</li>
+                        <li class="dark"><strong>1212 год:</strong> Крестовый поход детей — тысячи детей были проданы в рабство</li>
+                        <li class="dark"><strong>1209 год:</strong> Альбигойский крестовый поход — уничтожение еретиков на юге Франции</li>
+                    </ul>
+
+                    <h3 style="color: #8a6a5a;"><i class="fas fa-shield-alt"></i> Церковные ордены</h3>
+                    <p>
+                        <strong>Рыцарские ордены</strong> — тамплиеры, госпитальеры, тевтонцы — были созданы для защиты Святой земли, 
+                        но часто становились инструментом политических и экономических завоеваний.
+                    </p>
+                    <ul class="reference-list">
+                        <li class="dark"><strong>1119 год:</strong> Основание ордена тамплиеров</li>
+                        <li class="dark"><strong>1307 год:</strong> Разгром тамплиеров во Франции — сожжение Жака де Моле</li>
+                        <li class="dark"><strong>Тевтонский орден:</strong> Крестовые походы против пруссов и литовцев</li>
+                    </ul>
+
+                    <h3 style="color: #8a6a5a;"><i class="fas fa-globe-americas"></i> Завоевание Америки</h3>
+                    <p>
+                        <strong>Конкиста</strong> — испанское завоевание Америки (XVI век) — было проведено под знаменем креста. 
+                        Миллионы индейцев были убиты, обращены в рабство или насильно крещены.
+                    </p>
+                    <ul class="reference-list">
+                        <li class="dark"><strong>1519–1521:</strong> Кортес уничтожил империю ацтеков — десятки тысяч убитых</li>
+                        <li class="dark"><strong>1532–1533:</strong> Писарро захватил империю инков — казнь Атауальпы</li>
+                        <li class="dark"><strong>Инквизиция в Америке:</strong> Сожжение «еретиков» среди коренного населения</li>
+                        <li class="dark"><strong>Религиозные миссии:</strong> Часто были прикрытием для захвата земель и рабов</li>
+                    </ul>
+
+                    <h3 style="color: #8a6a5a;"><i class="fas fa-bomb"></i> Религиозные войны в Европе</h3>
+                    <ul class="reference-list">
+                        <li class="dark"><strong>1562–1598:</strong> Религиозные войны во Франции — убито до 3 миллионов человек</li>
+                        <li class="dark"><strong>1618–1648:</strong> Тридцатилетняя война — самая разрушительная, 8 миллионов жертв</li>
+                        <li class="dark"><strong>1572 год:</strong> Варфоломеевская ночь — массовое убийство гугенотов в Париже</li>
+                    </ul>
+
+                    <div class="highlight-box dark-side" style="margin-top: 30px;">
+                        <i class="fas fa-peace" style="color: #8a6a5a;"></i>
+                        <strong>Уроки истории:</strong> Религия не должна быть оружием. Настоящая вера — это 
+                        <strong>любовь, терпимость и уважение</strong>. Использование религии для оправдания насилия — 
+                        это <strong>предательство её истинной сути</strong>.
+                    </div>
+                </section>
+            </main>
+
+            <!-- ================================================
+            ПРАВАЯ КОЛОНКА - РЕЛИГИИ ВОСТОКА (ЗАГЛУШКА)
+            ================================================ -->
+            <aside class="sidebar-right" id="sidebar-right">
+                <div class="sidebar-title">
+                    <i class="fas fa-globe-asia"></i>
+                    Религии Востока
+                </div>
+
+                <!-- 
+                    =============================================
+                    ВСТАВЬТЕ ВАШИ ССЫЛКИ СЮДА (ПРАВОЕ ОКНО)
+                    =============================================
+                -->
+                <div class="sidebar-links">
+                    <!-- 
+                        ДЛЯ ЗАГОЛОВКОВ ГРУПП ИСПОЛЬЗУЙТЕ:
+                        <span class="group-title"><i class="fas fa-..."></i> Название группы</span>
+                        
+                        ДЛЯ РАЗДЕЛИТЕЛЕЙ:
+                        <hr>
+                        
+                        ДЛЯ ССЫЛОК (1-Й УРОВЕНЬ):
+                        <a href="путь_к_странице.html" target="_self">Название</a><br>
+                        
+                        ДЛЯ ССЫЛОК (С ОТСТУПОМ):
+                        <span class="link-indent"><a href="путь_к_странице.html" target="_self">- Название</a></span><br>
+                        
+                        ДЛЯ ССЫЛОК (С БОЛЬШИМ ОТСТУПОМ):
+                        <span class="link-indent-2"><a href="путь_к_странице.html" target="_self">- Название</a></span><br>
+                    -->
+
+                    <!-- ===== ПРИМЕР СТРУКТУРЫ (ЗАМЕНИТЕ НА ВАШИ ССЫЛКИ) ===== -->
+                    
+                    <hr>
+                    <span class="group-title"><i class="fas fa-star-and-crescent"></i> Ислам:</span>
+                    <span class="link-indent"><a href="#" target="_self">- Ваххабиты</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Хариджиты</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Мурджииты</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Сунниты</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Суфизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Мюридизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Шииты</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Бабизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Алиды</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Исмаилиты</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Алавиты</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Друзы</a></span><br>
+
+                    <hr>
+                    <span class="group-title"><i class="fas fa-dharmachakra"></i> Буддизм:</span>
+                    <span class="link-indent"><a href="#" target="_self">- Брахманизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Веды</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Тхеравада</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Школы Буддизма</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Махаяна</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Чань (Дзэн)</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Йогачара</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Мадхъямика</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Тяньтай</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Амидаизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Хуаянь/Кэгон</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Ваджраяна</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Буддизм Тибета</a></span><br>
+
+                    <hr>
+                    <span class="group-title"><i class="fas fa-yin-yang"></i> Религии Китая:</span>
+                    <span class="link-indent"><a href="#" target="_self">- Конфуцианство</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Даосизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Легизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Моизм</a></span><br>
+
+                    <hr>
+                    <span class="group-title"><i class="fas fa-torii-gate"></i> Религии Японии:</span>
+                    <span class="link-indent"><a href="#" target="_self">- Синтоизм</a></span><br>
+
+                    <hr>
+                    <span class="group-title"><i class="fas fa-om"></i> Религии Индии:</span>
+                    <span class="link-indent"><a href="#" target="_self">- Индуизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Парсизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Джайнизм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Сикхизм</a></span><br>
+
+                    <hr>
+                    <span class="group-title"><i class="fas fa-fire"></i> Религии Ирана:</span>
+                    <span class="link-indent"><a href="#" target="_self">- Зороастризм</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Езидизм</a></span><br>
+
+                    <hr>
+                    <span class="group-title"><i class="fas fa-star-of-david"></i> Иудаизм:</span>
+                    <span class="link-indent"><a href="#" target="_self">- Геры</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Консервативный</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Ортодоксальный</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Реформистский</a></span><br>
+                    <span class="link-indent"><a href="#" target="_self">- Хасиды</a></span><br>
+
+                    <!-- ===== КОНЕЦ ПРИМЕРА ===== -->
+                    
+                    <hr>
+                    <div style="text-align: center; color: var(--text-muted); font-size: 0.85rem; padding: 10px 0;">
+                        <i class="fas fa-edit"></i> Замените ссылки на Ваши
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <!-- ====================================================
+    ПОДВАЛ
+    ==================================================== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>© 2026 ReligioScope. Образовательный портал о религиях мира. Сделано с теплом и уважением. ☀️</p>
+            <div class="footer__socials">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================================================
+    JAVASCRIPT
+    ==================================================== -->
+    <script>
+        // ================================================
+        // 1. БУРГЕР-МЕНЮ
+        // ================================================
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav');
+
+        burger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            nav.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+            });
+        });
+
+        // ================================================
+        // 2. ПЕРЕКЛЮЧЕНИЕ ТЕМЫ
+        // ================================================
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+        let isLight = true;
+
+        themeToggle.addEventListener('click', function() {
+            const root = document.documentElement;
+
+            if (isLight) {
+                // ТЁМНАЯ ТЕМА
+                root.style.setProperty('--bg-primary', '#0b0a0f');
+                root.style.setProperty('--bg-secondary', '#1a1725');
+                root.style.setProperty('--bg-card', '#1e1b2a');
+                root.style.setProperty('--bg-sidebar', '#1a1725');
+                root.style.setProperty('--text-primary', '#f0ebf5');
+                root.style.setProperty('--text-secondary', '#c4b8d0');
+                root.style.setProperty('--text-muted', '#8a7a9a');
+                root.style.setProperty('--border-color', '#2c2838');
+                root.style.setProperty('--shadow-soft', '0 8px 30px rgba(0,0,0,0.3)');
+                root.style.setProperty('--shadow-hover', '0 20px 50px rgba(0,0,0,0.5)');
+                root.style.setProperty('--gradient-warm', 'radial-gradient(circle at 30% 40%, #1f1a2e, #0b0a0f 70%)');
+                document.getElementById('header').style.background = 'rgba(11, 10, 15, 0.95)';
+                document.querySelector('.header').style.borderBottomColor = '#2c2838';
+                icon.className = 'fas fa-sun';
+
+                document.querySelectorAll('.content-section p, .content-section li, .mini-card p, .reference-list li, .person-item .name, .person-item .years, .stat-item .label').forEach(el => {
+                    el.style.color = '#c4b8d0';
+                });
+                document.querySelectorAll('.content-section h2, .content-section h3, .mini-card h4, .stat-item .number, .sidebar-title, .logo, .logo-highlight').forEach(el => {
+                    el.style.color = '#f0ebf5';
+                });
+                document.querySelectorAll('.highlight-box, .quote-block, .mini-card, .stat-item, .person-item').forEach(el => {
+                    el.style.background = '#1e1b2a';
+                    el.style.borderColor = '#2c2838';
+                });
+                document.querySelectorAll('.highlight-box i, .mini-card i').forEach(el => {
+                    el.style.color = '#c49b6c';
+                });
+                document.querySelectorAll('.content-hero h1, .content-hero .subtitle').forEach(el => {
+                    el.style.color = '#f0ebf5';
+                });
+                document.querySelectorAll('.content-hero .icon-big').forEach(el => {
+                    el.style.color = '#c49b6c';
+                });
+                document.querySelectorAll('.nav a').forEach(el => {
+                    el.style.color = '#c4b8d0';
+                });
+                document.querySelectorAll('.nav a.active, .nav a:hover').forEach(el => {
+                    el.style.color = '#f0ebf5';
+                    el.style.borderBottomColor = '#c49b6c';
+                });
+                document.querySelectorAll('.footer p, .footer__socials a').forEach(el => {
+                    el.style.color = '#8a7a9a';
+                });
+                document.querySelectorAll('.sidebar-links a').forEach(el => {
+                    el.style.color = '#c4b8d0';
+                });
+                document.querySelectorAll('.sidebar-links .group-title').forEach(el => {
+                    el.style.color = '#00CC00';
+                });
+            } else {
+                // СВЕТЛАЯ ТЕМА
+                root.style.setProperty('--bg-primary', '#fcf9f5');
+                root.style.setProperty('--bg-secondary', '#f8f3ed');
+                root.style.setProperty('--bg-card', '#ffffff');
+                root.style.setProperty('--bg-sidebar', '#f5efe9');
+                root.style.setProperty('--text-primary', '#2c241e');
+                root.style.setProperty('--text-secondary', '#6b5d53');
+                root.style.setProperty('--text-muted', '#a39387');
+                root.style.setProperty('--border-color', '#e8ddd2');
+                root.style.setProperty('--shadow-soft', '0 8px 30px rgba(150, 120, 100, 0.08)');
+                root.style.setProperty('--shadow-hover', '0 20px 50px rgba(150, 120, 100, 0.15)');
+                root.style.setProperty('--gradient-warm', 'linear-gradient(145deg, #fcf6ef 0%, #f5ede4 100%)');
+                document.getElementById('header').style.background = 'rgba(252, 249, 245, 0.95)';
+                document.querySelector('.header').style.borderBottomColor = '#e8ddd2';
+                icon.className = 'fas fa-moon';
+
+                document.querySelectorAll('.content-section p, .content-section li, .mini-card p, .reference-list li, .person-item .name, .person-item .years, .stat-item .label, .nav a, .footer p, .footer__socials a, .sidebar-links a').forEach(el => {
+                    el.style.color = '';
+                });
+                document.querySelectorAll('.content-section h2, .content-section h3, .mini-card h4, .stat-item .number, .sidebar-title, .logo, .logo-highlight, .content-hero h1, .content-hero .subtitle, .sidebar-links .group-title').forEach(el => {
+                    el.style.color = '';
+                });
+                document.querySelectorAll('.highlight-box, .quote-block, .mini-card, .stat-item, .person-item').forEach(el => {
+                    el.style.background = '';
+                    el.style.borderColor = '';
+                });
+                document.querySelectorAll('.highlight-box i, .mini-card i, .content-hero .icon-big').forEach(el => {
+                    el.style.color = '';
+                });
+                document.querySelectorAll('.nav a.active, .nav a:hover').forEach(el => {
+                    el.style.color = '';
+                    el.style.borderBottomColor = '';
+                });
+            }
+            isLight = !isLight;
+        });
+
+        // ================================================
+        // 3. ПЛАВНАЯ ПРОКРУТКА К ЗАГОЛОВКУ (ЯКОРЯ)
+        // ================================================
+        document.querySelectorAll('.nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+
+                const targetId = href.replace('#', '');
+                let target = document.querySelector('a[name="' + targetId + '"]');
+                if (!target) {
+                    target = document.querySelector(href);
+                }
+
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ================================================
+        // 4. КНОПКА "НАВЕРХ"
+        // ================================================
+        const scrollBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+
+        scrollBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ================================================
+        // 5. КЛИК ПО РЕЛИГИИ В БОКОВЫХ КОЛОНКАХ (ЗАГЛУШКА)
+        // ================================================
+        document.querySelectorAll('.sidebar-links a').forEach(item => {
+            item.addEventListener('click', function(e) {
+                // Если ссылка ведёт на #, показываем уведомление
+                if (this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    alert('🌿 Здесь будет Ваша страница с информацией о религии.\n\nЗамените "#" на путь к Вашему HTML-файлу.');
+                }
+            });
+        });
+
+        // ================================================
+        // 6. АКТИВНЫЙ ПУНКТ МЕНЮ ПРИ ПРОКРУТКЕ
+        // ================================================
+        const sections = document.querySelectorAll('.content-section');
+        const navLinks = document.querySelectorAll('.nav a');
+
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const headerHeight = document.querySelector('.header').offsetHeight;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - headerHeight - 50;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        console.log('🌞 ReligioScope загружен!');
+        console.log('📌 В левой и правой колонках — заглушки.');
+        console.log('✏️ Замените ссылки на Ваши HTML-файлы.');
+    </script>
+</body>
+</html>

@@ -22,8 +22,12 @@
     <header class="header" id="header">
         <div class="container header__inner">
             <div class="logo" id="logo">
-                <div><a href="index.html "   target = _self ><img src="img_rel/krest_ruki.gif" align = middle width= 200  height= 100  ></a></div>
+                <div>
+                    <a href="index.html "   target = _self ><img src="img_rel/krest_ruki.gif" align = middle width= 200  height= 100  ></a>
+                    <span class="logo-sub"><font color = #000000 >Образовательный портал о религиях мира</font></span>
+                </div>
             </div> 
+
 <nav class="nav" id="nav">
     <ul>
         <li><a href="#about-religion" class="active">О религии</a></li>
@@ -34,9 +38,9 @@
         <li><a href="#basics">Основы</a></li>
         <li><a href="#references">Ресурсы</a></li>
         <li><a href="#dark-history">Теневые страницы</a></li>
-        <!-- -->
-        <li class="mobile-only"><a href="#sidebar-left">Религии Запада</a></li>
-        <li class="mobile-only"><a href="#sidebar-right">֠Религии Востока</a></li>
+        <!-- ДОБАВЛЯЕМ ДВЕ ССЫЛКИ ДЛЯ МОБИЛЬНОЙ ВЕРСИИ -->
+        <li class="mobile-only"><a href="#sidebar-left">ߓ֠Религии Запада</a></li>
+        <li class="mobile-only"><a href="#sidebar-right">ߓ֠Религии Востока</a></li>
     </ul>
 </nav>
             <div class="header__theme" id="themeToggle" title="Переключить тему">
@@ -50,19 +54,35 @@
             </div>
         </div>
     </header>
+
+    <!-- ====================================================
+    КНОПКА "НАВЕРХ"
+    ==================================================== -->
     <a href="#" id="scrollTopBtn" class="scroll-top-btn" title="Наверх">
         <i class="fas fa-chevron-up"></i>
     </a>
+
+    <!-- ====================================================
+    ОСНОВНАЯ СЕТКА: 3 КОЛОНКИ
+    ==================================================== -->
     <div class="container">
         <div class="main-grid">
+
+            <!-- ================================================
+            ЛЕВАЯ КОЛОНКА - РЕЛИГИИ ЗАПАДА
+            ================================================ -->
             <aside class="sidebar-left" id="sidebar-left">
                 <div class="sidebar-title">
                     <i class="fas fa-globe-americas"></i>
                     Религии Запада
                 </div>
 
+                <!-- ВСТАВЬТЕ ВАШИ ССЫЛКИ СЮДА (ЛЕВОЕ ОКНО) -->
                 <div class="sidebar-links">
                     <img src="img_rel/rel_zap.jpg" align = middle width= 200  height= 100  >
+                    <!-- ==========================================
+                    ЗАМЕНИТЕ ЭТОТ БЛОК НА ВАШИ ССЫЛКИ
+                    ========================================== -->
 <hr>
 <span class="group-title"><i class="fas fa-cross"></i> Православные церкви:</span>
 <span class="link-indent"><a href="x_alb.html" target="_self">- Албанская</a></span><br>
@@ -222,15 +242,18 @@
 <span class="link-indent"><a href="x_mas.html" target="_self">- Масонство</a></span><br>
 <span class="link-indent"><a href="x_roz.html" target="_self">- Розенкрейцеры</a></span><br>
 <span class="link-indent"><a href="x_spir.html" target="_self">- Спиритизм</a></span><br>
-<hr>
+
+<hr>                    <!-- ===== КОНЕЦ БЛОКА ДЛЯ ЗАМЕНЫ ===== -->
                 </div>
             </aside>
-            <!>
+
+            <!-- ================================================
+            ЦЕНТРАЛЬНАЯ КОЛОНКА - ГЛАВНЫЙ КОНТЕНТ
+            ================================================ -->
             <main class="main-content" id="main-content">
                 <div class="content-hero" id="hero-title">
-                   <p align = center><h1>Образовательный портал <br>о религиях мира</h1></p>
-                   <img src="img_rel/religii.jpg" alt=" Образовательный портал о религиях мира  " align = center  > 
-                    <h2>Что такое религия <br>и зачем она людям?</h2>
+                    <img src="img_rel/religii.jpg" alt=" Образовательный портал о религиях мира  " align = center  > 
+                    <h1>Что такое религия <br>и зачем она людям?</h1>
                     <p class="subtitle">Путешествие сквозь века и культуры в поисках ответа на главные вопросы бытия</p>
                 </div>
 
@@ -383,7 +406,12 @@
                     <h2><i class="fas fa-globe"></i> Основы мировых религий</h2>
                     <h3><i class="fas fa-users" style="color: var(--accent-terracotta);"></i> Количество последователей</h3>
                     <div class="stat-grid">
-                           <a href="c_kol_posl.html"  target =_blank>Примерное количество последователей разных религий.</a>
+                        <div class="stat-item"><div class="number">2.4 млрд</div><div class="label">Христианство</div></div>
+                        <div class="stat-item"><div class="number">1.9 млрд</div><div class="label">Ислам</div></div>
+                        <div class="stat-item"><div class="number">1.2 млрд</div><div class="label">Индуизм</div></div>
+                        <div class="stat-item"><div class="number">520 млн</div><div class="label">Буддизм</div></div>
+                        <div class="stat-item"><div class="number">15 млн</div><div class="label">Иудаизм</div></div>
+                        <div class="stat-item"><div class="number">~1.2 млрд</div><div class="label">Неверующие / другие</div></div>
                     </div>
                     <h3><i class="fas fa-book" style="color: var(--accent-terracotta);"></i> Священные книги</h3>
                     <ul class="reference-list">
@@ -396,25 +424,38 @@
                         <li><strong>Авеста</strong> — священные тексты зороастризма</li>
                         <li><strong>Гуру Грантх Сахиб</strong> — священная книга сикхизма</li>
                     </ul>
-                    <a href="osn_reg_kn.html"  target =_blank>Краткий обзор основных священных книг.</a>
                     <h3><i class="fas fa-calendar-check" style="color: var(--accent-terracotta);"></i> Главные праздники</h3>
                     <ul class="reference-list">
-                         <a href="osn_reg_pr.html"  target =_blank>Главные события и праздники.</a>
+                        <li><strong>Христианство:</strong> Рождество (25 декабря/7 января), Пасха, Крещение, Троица</li>
+                        <li><strong>Ислам:</strong> Ураза-байрам (Ид аль-Фитр), Курбан-байрам (Ид аль-Адха), Мавлид</li>
+                        <li><strong>Иудаизм:</strong> Рош ха-Шана (Новый год), Йом-Киппур (Судный день), Песах (Пасха), Ханука</li>
+                        <li><strong>Буддизм:</strong> Весак (день рождения Будды), Асандха Пуджа, Упосатха</li>
+                        <li><strong>Индуизм:</strong> Дивали (праздник огней), Холи (фестиваль красок), Наваратри</li>
                     </ul>
                     <h3><i class="fas fa-praying-hands" style="color: var(--accent-terracotta);"></i> Основные обряды</h3>
                     <ul class="reference-list">
-                         <a href="osn_reg_obr.html" target =_blank>Основные обряды .</a>
+                        <li><strong>Христианство:</strong> Крещение, причастие (евхаристия), венчание, исповедь, соборование</li>
+                        <li><strong>Ислам:</strong> Шахада (символ веры), намаз (молитва), закят (милостыня), ураза (пост), хадж (паломничество)</li>
+                        <li><strong>Иудаизм:</strong> Брит-мила (обрезание), бар-мицва, свадьба, суббота (Шаббат)</li>
+                        <li><strong>Буддизм:</strong> Медитация, чтение сутр, подношения в храмах, ретриты</li>
+                        <li><strong>Индуизм:</strong> Пуджа (ритуал почитания), священные омовения в Ганге, йога</li>
                     </ul>
                     <h3><i class="fas fa-crown" style="color: var(--accent-terracotta);"></i> Папы Римские (избранные)</h3>
                     <div class="person-list">
-                          <a href="papi_rim.html"    target =_blank>Папы Римские и их времена ...</a>
+                        <div class="person-item"><i class="fas fa-pope"></i><div><span class="name">Франциск</span> <span class="years">(2013 — н.в.)</span></div></div>
+                        <div class="person-item"><i class="fas fa-pope"></i><div><span class="name">Бенедикт XVI</span> <span class="years">(2005—2013)</span></div></div>
+                        <div class="person-item"><i class="fas fa-pope"></i><div><span class="name">Иоанн Павел II</span> <span class="years">(1978—2005)</span></div></div>
+                        <div class="person-item"><i class="fas fa-pope"></i><div><span class="name">Павел VI</span> <span class="years">(1963—1978)</span></div></div>
                     </div>
                     <h3><i class="fas fa-church" style="color: var(--accent-terracotta);"></i> Патриархи Русской православной церкви</h3>
                     <div class="person-list">
-                          <a href="papi_rus.html"    target =_blank>Патриархи Русской православной церкви и их времена ...</a>
+                        <div class="person-item"><i class="fas fa-orthodox-cross"></i><div><span class="name">Кирилл</span> <span class="years">(2009 — н.в.)</span></div></div>
+                        <div class="person-item"><i class="fas fa-orthodox-cross"></i><div><span class="name">Алексий II</span> <span class="years">(1990—2008)</span></div></div>
+                        <div class="person-item"><i class="fas fa-orthodox-cross"></i><div><span class="name">Пимен</span> <span class="years">(1971—1990)</span></div></div>
+                        <div class="person-item"><i class="fas fa-orthodox-cross"></i><div><span class="name">Алексий I</span> <span class="years">(1945—1970)</span></div></div>
                     </div>
                 </section>
-  
+
                 <section class="content-section" id="references">
                     <a name="references"></a>
                     <h2><i class="fas fa-link"></i> Полезные ресурсы</h2>
@@ -513,13 +554,22 @@
                     </div>
                 </section>
             </main>
+
+            <!-- ================================================
+            ПРАВАЯ КОЛОНКА - РЕЛИГИИ ВОСТОКА
+            ================================================ -->
             <aside class="sidebar-right" id="sidebar-right">
                 <div class="sidebar-title">
                     <i class="fas fa-globe-asia"></i>
                     Религии Востока
                 </div>
+
+                <!-- ВСТАВЬТЕ ВАШИ ССЫЛКИ СЮДА (ПРАВОЕ ОКНО) -->
                 <div class="sidebar-links">
                     <img src="img_rel/budda.gif" align = center width= 200  height= 100  >
+                    <!-- ==========================================
+                    ЗАМЕНИТЕ ЭТОТ БЛОК НА ВАШИ ССЫЛКИ
+                    ========================================== -->
                     <hr color = #036484 width =100%>
                      <span class="link-indent"><a href="v_islam.html"   target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Ислам :</font></a></span><br>
                     <span class="link-indent"><a href="v_vakx.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ваххабиты.</a></span><br>
@@ -691,6 +741,7 @@
                     <span class="link-indent"><a href="v_sfor.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Форум.</a></span><br>
                     <span class="link-indent"><a href="v_scvt.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь всеобщая<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; и торжествующая.</a></span><br>
                     <hr color = #036484 width =100%>
+                    <!-- ===== КОНЕЦ БЛОКА ДЛЯ ЗАМЕНЫ ===== -->
                 </div>
             </aside>
 
@@ -748,6 +799,10 @@ apsdoc.write(apsimg+"&c="+c+"&wd="+wd+"&r="+escape(apsdoc.referrer.slice(7))+" w
 <!-- Лічильник , Зовнішні посилання ПОЧАТОК -->  
 <!>
     </div>
+
+    <!-- ====================================================
+    ПОДВАЛ
+    ==================================================== -->
     <footer class="footer">
          <p align = center>
                         Copyright © 2010-2026 г.  E-mail: <a href ="mailto:_pvi@ukr.net" target=_blank title ="Автора !!! Автора !!!." ><font color=" #036484"><strong>_pvi@ukr.net</strong></font></a>           <br>
@@ -758,7 +813,13 @@ apsdoc.write(apsimg+"&c="+c+"&wd="+wd+"&r="+escape(apsdoc.referrer.slice(7))+" w
          </p>
     </footer>
     <hr><br>
+    <!-- ====================================================
+    JAVASCRIPT
+    ==================================================== -->
     <script>
+        // ================================================
+        // 1. БУРГЕР-МЕНЮ
+        // ================================================
         const burger = document.getElementById('burger');
         const nav = document.getElementById('nav');
 
@@ -772,6 +833,10 @@ apsdoc.write(apsimg+"&c="+c+"&wd="+wd+"&r="+escape(apsdoc.referrer.slice(7))+" w
                 nav.classList.remove('open');
             });
         });
+
+        // ================================================
+        // 2. ПЕРЕКЛЮЧЕНИЕ ТЕМЫ
+        // ================================================
         const themeToggle = document.getElementById('themeToggle');
         const icon = themeToggle.querySelector('i');
         let isLight = true;
@@ -868,6 +933,10 @@ apsdoc.write(apsimg+"&c="+c+"&wd="+wd+"&r="+escape(apsdoc.referrer.slice(7))+" w
             }
             isLight = !isLight;
         });
+
+        // ================================================
+        // 3. ПЛАВНАЯ ПРОКРУТКА К ЗАГОЛОВКУ (ЯКОРЯ)
+        // ================================================
         document.querySelectorAll('.nav a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
@@ -891,6 +960,10 @@ apsdoc.write(apsimg+"&c="+c+"&wd="+wd+"&r="+escape(apsdoc.referrer.slice(7))+" w
                 }
             });
         });
+
+        // ================================================
+        // 4. КНОПКА "НАВЕРХ"
+        // ================================================
         const scrollBtn = document.getElementById('scrollTopBtn');
 
         window.addEventListener('scroll', function() {
@@ -908,6 +981,10 @@ apsdoc.write(apsimg+"&c="+c+"&wd="+wd+"&r="+escape(apsdoc.referrer.slice(7))+" w
                 behavior: 'smooth'
             });
         });
+
+        // ================================================
+        // 5. КЛИК ПО ССЫЛКАМ-ЗАГЛУШКАМ
+        // ================================================
         document.querySelectorAll('.sidebar-links a').forEach(item => {
             if (item.getAttribute('href') === '#') {
                 item.addEventListener('click', function(e) {
@@ -916,6 +993,10 @@ apsdoc.write(apsimg+"&c="+c+"&wd="+wd+"&r="+escape(apsdoc.referrer.slice(7))+" w
                 });
             }
         });
+
+        // ================================================
+        // 6. АКТИВНЫЙ ПУНКТ МЕНЮ ПРИ ПРОКРУТКЕ
+        // ================================================
         const sections = document.querySelectorAll('.content-section');
         const navLinks = document.querySelectorAll('.nav a');
 

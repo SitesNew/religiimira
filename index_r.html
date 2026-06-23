@@ -1,29 +1,705 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head> 
-       <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Образовательный портал о религиях мира</title>
+    
+    <!-- Подключаем шрифты и иконки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- ПОДКЛЮЧАЕМ ВНЕШНИЙ CSS ФАЙЛ -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+ 
+    <!-- ====================================================
+    ШАПКА
+    ==================================================== -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <div class="logo" id="logo">
+                <div><a href="index.html "   target = _self ><img src="img_rel/krest_ruki.gif" align = middle width= 200  height= 100  ></a></div>
+            </div> 
+<nav class="nav" id="nav">
+    <ul>
+        <li><a href="#about-religion" class="active">О религии</a></li>
+        <li><a href="#history">История</a></li>
+        <li><a href="#humanism">Гуманизм</a></li>
+        <li><a href="#meaning">Смысл жизни</a></li>
+        <li><a href="#non-believers">Для ищущих</a></li>
+        <li><a href="#basics">Основы</a></li>
+        <li><a href="#references">Ресурсы</a></li>
+        <li><a href="#dark-history">Теневые страницы</a></li>
+        <!-- -->
+        <li class="mobile-only"><a href="#sidebar-left">Религии Запада</a></li>
+        <li class="mobile-only"><a href="#sidebar-right">֠Религии Востока</a></li>
+    </ul>
+</nav>
+            <div class="header__theme" id="themeToggle" title="Переключить тему">
+                <i class="fas fa-moon"></i>
+            </div>
 
-   <title> Образовательный портал о религиях мира  </title>
-   <meta name="title" content=" Образовательный портал о религиях мира  ">
-   <meta name="author" content="Валентин Приходько">
-   <meta name="keywords"       content=" Образовательный портал о религиях мира, Религии Запада,Православные церкви,Старообрядчество,Неканоническое православие,Дохалкидонские церкви,Протестантство,Сектанство,Западные секты,Русские секты ,Основы мировых религий,Религиозные обряды,Папы Римские,Патриархи Русской православной церкви,Религии Востока,Ислам,Буддизм,Иудаизм,Шаманизм,Вуду,Религии Древности,Секты Востока"> 
-   <meta http-equiv="keywords" content=" Образовательный портал о религиях мира, Религии Запада,Православные церкви,Старообрядчество,Неканоническое православие,Дохалкидонские церкви,Протестантство,Сектанство,Западные секты,Русские секты ,Основы мировых религий,Религиозные обряды,Папы Римские,Патриархи Русской православной церкви,Религии Востока,Ислам,Буддизм,Иудаизм,Шаманизм,Вуду,Религии Древности,Секты Востока">
-   <meta name="robots" content="index,follow">
-   <meta name="description"    content=" Образовательный портал о религиях мира, Религии Запада,Православные церкви,Старообрядчество,Неканоническое православие,Дохалкидонские церкви,Протестантство,Сектанство,Западные секты,Русские секты ,Основы мировых религий,Религиозные обряды,Папы Римские,Патриархи Русской православной церкви,Религии Востока,Ислам,Буддизм,Иудаизм,Шаманизм,Вуду,Религии Древности,Секты Востока">
-   <meta name="copyright" content=" Copyright © 2010-2026 г.  , all rights reserved.">
-   <meta name="document-state" content="dynamic">
-   <meta name="revisit-after" content="1 days">
-   <meta name="classification" content=" Образовательный портал о религиях мира   ">
-   <meta name="category" content="Образовательный портал о религиях мира  ">
-   <meta http-equiv="language" content="russian">
-   <meta name="rating" content="general">
-   <meta name="distribution" content="global">
-   <meta name="resourse-type" content="document">
-<!>
-<! Таблица Стилей>
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<! Для Кнопок>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <a href="#" id="scrollTopBtn" class="scroll-top-btn" title="Наверх">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    <div class="container">
+        <div class="main-grid">
+            <aside class="sidebar-left" id="sidebar-left">
+                <div class="sidebar-title">
+                    <i class="fas fa-globe-americas"></i>
+                    Религии Запада
+                </div>
+
+                <div class="sidebar-links">
+                    <img src="img_rel/rel_zap.jpg" align = middle width= 200  height= 100  >
+<hr>
+<span class="group-title"><i class="fas fa-cross"></i> Православные церкви:</span>
+<span class="link-indent"><a href="x_alb.html" target="_self">- Албанская</a></span><br>
+<span class="link-indent"><a href="x_alex.html" target="_self">- Александрийская</a></span><br>
+<span class="link-indent"><a href="x_amer.html" target="_self">- Американская</a></span><br>
+<span class="link-indent"><a href="x_antiox.html" target="_self">- Антиохийская</a></span><br>
+<span class="link-indent"><a href="x_bolg.html" target="_self">- Болгарская</a></span><br>
+<span class="link-indent"><a href="x_gruz.html" target="_self">- Грузинская</a></span><br>
+<span class="link-indent"><a href="x_ierus.html" target="_self">- Иерусалимская</a></span><br>
+<span class="link-indent"><a href="x_kipr.html" target="_self">- Кипрская</a></span><br>
+<span class="link-indent"><a href="x_konst.html" target="_self">- Константинополь</a></span><br>
+<span class="link-indent"><a href="x_pol.html" target="_self">- Польская</a></span><br>
+<span class="link-indent"><a href="x_rum.html" target="_self">- Румынская</a></span><br>
+<span class="link-indent"><a href="x_rus.html" target="_self">- Русская</a></span><br>
+<span class="link-indent"><a href="x_bel.html" target="_self">- Белорусская</a></span><br>
+<span class="link-indent"><a href="x_kit.html" target="_self">- Китайская</a></span><br>
+<span class="link-indent"><a href="x_lat.html" target="_self">- Латвийская</a></span><br>
+<span class="link-indent"><a href="x_mold.html" target="_self">- Молдавская</a></span><br>
+<span class="link-indent"><a href="x_rus_z.html" target="_self">- Русская за границей</a></span><br>
+<span class="link-indent"><a href="x_ukr.html" target="_self">- Украинская</a></span><br>
+<span class="link-indent"><a href="x_est.html" target="_self">- Эстонская (МП)</a></span><br>
+<span class="link-indent"><a href="x_serb.html" target="_self">- Сербская</a></span><br>
+<span class="link-indent"><a href="x_cheh.html" target="_self">- Чехословацкая</a></span><br>
+<span class="link-indent"><a href="x_ell.html" target="_self">- Элладская</a></span><br>
+<span class="link-indent"><a href="x_krit.html" target="_self">- Критская</a></span><br>
+<span class="link-indent"><a href="x_sin.html" target="_self">- Синайская</a></span><br>
+<span class="link-indent"><a href="x_fin.html" target="_self">- Финляндская</a></span><br>
+<span class="link-indent"><a href="x_jap.html" target="_self">- Японская</a></span><br>
+
+<hr>
+<span class="group-title"><i class="fas fa-church"></i> Старообрядчество:</span>
+<span class="link-indent"><a href="x_dpc.html" target="_self">- Древлеправославная Поморская церковь</a></span><br>
+<span class="link-indent"><a href="x_rdc.html" target="_self">- Русская древлеправославная церковь</a></span><br>
+<span class="link-indent"><a href="x_rpcc.html" target="_self">- Русская православная старообрядческая церковь</a></span><br>
+
+<hr>
+<span class="group-title"><i class="fas fa-building-columns"></i> Неканоническое православие:</span>
+<span class="link-indent"><a href="x_bac.html" target="_self">- Белорусская автокефальная церковь</a></span><br>
+<span class="link-indent"><a href="x_katc.html" target="_self">- Катакомбная церковь</a></span><br>
+<span class="link-indent"><a href="x_makpc.html" target="_self">- Македонская православная церковь</a></span><br>
+<span class="link-indent"><a href="x_rpac.html" target="_self">- Российская православная автономная церковь</a></span><br>
+<span class="link-indent"><a href="x_rpci.html" target="_self">- Русская православная церковь в изгнании</a></span><br>
+<span class="link-indent"><a href="x_bstc.html" target="_self">- Болгарская старостильная церковь</a></span><br>
+<span class="link-indent"><a href="x_gstc.html" target="_self">- Греческая старостильная церковь</a></span><br>
+<span class="link-indent"><a href="x_rstc.html" target="_self">- Румынская старостильная церковь</a></span><br>
+<span class="link-indent"><a href="x_uac.html" target="_self">- Украинская автокефальная церковь</a></span><br>
+<span class="link-indent"><a href="x_upc_kp.html" target="_self">- Украинская православная церковь (КП)</a></span><br>
+
+<hr>
+<span class="group-title"><i class="fas fa-ankh"></i> Дохалкидонские церкви:</span>
+<span class="link-indent"><a href="x_monof.html" target="_self">- Монофизиты</a></span><br>
+<span class="link-indent"><a href="x_sia.html" target="_self">- Сиро-яковитская</a></span><br>
+<span class="link-indent"><a href="x_aac.html" target="_self">- Армянская Апостольская</a></span><br>
+<span class="link-indent"><a href="x_copt.html" target="_self">- Коптская</a></span><br>
+<span class="link-indent"><a href="x_ef.html" target="_self">- Эфиопская</a></span><br>
+<span class="link-indent"><a href="x_nest.html" target="_self">- Несториане</a></span><br>
+<span class="link-indent"><a href="x_assir.html" target="_self">- Ассирийская</a></span><br>
+
+<hr>
+<span class="group-title"><i class="fas fa-bible"></i> Протестантство:</span>
+<span class="link-indent"><a href="x_asd.html" target="_self">- Адвентисты Седьмого Дня</a></span><br>
+<span class="link-indent"><a href="x_angl.html" target="_self">- Англиканская церковь</a></span><br>
+<span class="link-indent"><a href="x_bapt.html" target="_self">- Баптизм</a></span><br>
+<span class="link-indent"><a href="x_vald.html" target="_self">- Вальденсы</a></span><br>
+<span class="link-indent"><a href="x_evx.html" target="_self">- Евангельские христиане</a></span><br>
+<span class="link-indent"><a href="x_kalv.html" target="_self">- Кальвинизм</a></span><br>
+<span class="link-indent"><a href="x_kvak.html" target="_self">- Квакеры</a></span><br>
+<span class="link-indent"><a href="x_lut.html" target="_self">- Лютеранство</a></span><br>
+<span class="link-indent"><a href="x_menn.html" target="_self">- Меннонизм</a></span><br>
+<span class="link-indent"><a href="x_met.html" target="_self">- Методизм</a></span><br>
+<span class="link-indent"><a href="x_morm.html" target="_self">- Мормоны</a></span><br>
+<span class="link-indent"><a href="x_presv.html" target="_self">- Пресвитерианство</a></span><br>
+<span class="link-indent"><a href="x_piati.html" target="_self">- Пятидесятники</a></span><br>
+<span class="link-indent"><a href="x_xar.html" target="_self">- Харизматы</a></span><br>
+<span class="link-indent"><a href="x_pos_b.html" target="_self">- Посольство Божье</a></span><br>
+<span class="link-indent"><a href="x_uxr.html" target="_self">- Ученики Христа</a></span><br>
+
+<hr>
+<span class="group-title"><i class="fas fa-crown"></i> Католичество:</span>
+<span class="link-indent"><a href="x_rim_k.html" target="_self">- Римско-католическая церковь</a></span><br>
+<span class="link-indent"><a href="x_vost_k.html" target="_self">- Восточно-католические церкви</a></span><br>
+<span class="link-indent"><a href="x_st_kat.html" target="_self">- Старокатолики</a></span><br>
+
+<hr>
+<span class="group-title"><i class="fas fa-star"></i> Другие направления:</span>
+<span class="link-indent"><a href="x_bogc.html" target="_self">- Богородичный центр</a></span><br>
+<span class="link-indent"><a href="x_detb.html" target="_self">- Дети Бога (организация)</a></span><br>
+<span class="link-indent"><a href="x_unit.html" target="_self">- Унитарии</a></span><br>
+<span class="link-indent"><a href="x_sveg.html" target="_self">- Свидетели Иеговы</a></span><br>
+<span class="link-indent"><a href="x_xrd.html" target="_self">- Христадельфиане</a></span><br>
+<span class="link-indent"><a href="x_duh.html" target="_self">- Духоборы</a></span><br>
+<span class="link-indent"><a href="x_moloc.html" target="_self">- Молокане</a></span><br>
+<span class="link-indent"><a href="x_nc.html" target="_self">- Новая церковь</a></span><br>
+<span class="link-indent"><a href="x_tolst.html" target="_self">- Толстовцы</a></span><br>
+<span class="link-indent"><a href="x_sub.html" target="_self">- Субботники</a></span><br>
+<span class="link-indent"><a href="x_eg.html" target="_self">- Ересь жидовствующих</a></span><br>
+<hr>
+<span class="group-title"><i class="fas fa-users"></i> Сектанство:</span>
+<hr>
+<span class="group-title"><i class="fas fa-globe-americas"></i> Западные секты:</span>
+<span class="link-indent"><a href="x_vd.html" target="_self">- Ветвь Давидова</a></span><br>
+<span class="link-indent"><a href="x_nh.html" target="_self">- Народный храм</a></span><br>
+<span class="link-indent"><a href="x_zoxr.html" target="_self">- Орден Храма солнца</a></span><br>
+<span class="link-indent"><a href="x_rast.html" target="_self">- Растафарианство</a></span><br>
+<span class="link-indent"><a href="x_saent.html" target="_self">- Саентология</a></span><br>
+<span class="link-indent"><a href="x_sava.html" target="_self">- Савайвалисты</a></span><br>
+<span class="link-indent"><a href="x_semia.html" target="_self">- Семья</a></span><br>
+<span class="link-indent"><a href="x_xn.html" target="_self">- Христианская наука</a></span><br>
+<span class="link-indent"><a href="x_uu.html" target="_self">- Унитарно-универсалисткая</a></span><br>
+
+<hr>
+<span class="group-title"><i class="fas fa-flag-ru"></i> Русские секты:</span>
+<span class="link-indent"><a href="x_bb.html" target="_self">- Белое братство</a></span><br>
+<span class="link-indent"><a href="x_iv.html" target="_self">- Ивановцы</a></span><br>
+<span class="link-indent"><a href="x_rbg.html" target="_self">- Ревнители благочестия</a></span><br>
+<span class="link-indent"><a href="x_sdb.html" target="_self">- Семья детей Бога</a></span><br>
+<span class="link-indent"><a href="x_adam.html" target="_self">- Церковь адамитов</a></span><br>
+<span class="link-indent"><a href="x_co.html" target="_self">- Церковь Откровения</a></span><br>
+<span class="link-indent"><a href="x_cpz.html" target="_self">- Церковь последнего завета</a></span><br>
+<span class="link-indent"><a href="x_cfot.html" target="_self">- Церковь Фотинии</a></span><br>
+<span class="link-indent"><a href="x_chur.html" target="_self">- Чуриковцы</a></span><br>
+
+<hr>
+<span class="group-title"><i class="fas fa-building-columns"></i> Квазиденоминации:</span>
+<span class="link-indent"><a href="x_adv.html" target="_self">- Адвентисты</a></span><br>
+<span class="link-indent"><a href="x_vcb.html" target="_self">- Всемирная церковь Бога</a></span><br>
+<span class="link-indent"><a href="x_dv.html" target="_self">- Движение веры</a></span><br>
+<span class="link-indent"><a href="x_nova.html" target="_self">- Новоапостольская церковь</a></span><br>
+<span class="link-indent"><a href="x_pomc.html" target="_self">- Поместная церковь</a></span><br>
+<span class="link-indent"><a href="x_ch.html" target="_self">- Церковь Христа</a></span><br>
+
+<hr>
+<span class="group-title"><i class="fas fa-pentagram"></i> Сатанизм:</span>
+<span class="link-indent"><a href="x_brman.html" target="_self">- Братство Мадра</a></span><br>
+<span class="link-indent"><a href="x_kris.html" target="_self">- Крысятницы</a></span><br>
+<span class="link-indent"><a href="x_osat.html" target="_self">- Общество сатаны</a></span><br>
+<span class="link-indent"><a href="x_sinlot.html" target="_self">- Синий лотос</a></span><br>
+<span class="link-indent"><a href="x_cnavi.html" target="_self">- Церковь Нави</a></span><br>
+<span class="link-indent"><a href="x_grkv.html" target="_self">- Группы культа "Вуду"</a></span><br>
+<span class="link-indent"><a href="x_cuni.html" target="_self">- Центр "Юнивер"</a></span><br>
+<span class="link-indent"><a href="x_zelor.html" target="_self">- "Зеленый орден"</a></span><br>
+<span class="link-indent"><a href="x_chera.html" target="_self">- Черный ангел</a></span><br>
+<span class="link-indent"><a href="x_cherbr.html" target="_self">- Черное братство</a></span><br>
+<span class="link-indent"><a href="x_cherd.html" target="_self">- Черный дракон</a></span><br>
+<span class="link-indent"><a href="x_ugkr.html" target="_self">- Южный крест</a></span><br>
+<span class="link-indent"><a href="x_luc.html" target="_self">- Люциферизм</a></span><br>
+<span class="link-indent"><a href="x_xrc.html" target="_self">- Храм Сета</a></span><br>
+<span class="link-indent"><a href="x_csat.html" target="_self">- Церковь сатаны</a></span><br>
+
+<hr>
+<span class="group-title"><i class="fas fa-crystal-ball"></i> Оккультизм:</span>
+<span class="link-indent"><a href="x_antro.html" target="_self">- Антропософия</a></span><br>
+<span class="link-indent"><a href="x_germ.html" target="_self">- Герметизм</a></span><br>
+<span class="link-indent"><a href="x_kab.html" target="_self">- Каббализм</a></span><br>
+<span class="link-indent"><a href="x_mag.html" target="_self">- Магия</a></span><br>
+<span class="link-indent"><a href="x_mant.html" target="_self">- Мантика</a></span><br>
+<span class="link-indent"><a href="x_mas.html" target="_self">- Масонство</a></span><br>
+<span class="link-indent"><a href="x_roz.html" target="_self">- Розенкрейцеры</a></span><br>
+<span class="link-indent"><a href="x_spir.html" target="_self">- Спиритизм</a></span><br>
+<hr>
+                </div>
+            </aside>
+            <!>
+            <main class="main-content" id="main-content">
+                <div class="content-hero" id="hero-title">
+                   <p align = center><h1>Образовательный портал <br>о религиях мира</h1></p>
+                   <img src="img_rel/religii.jpg" alt=" Образовательный портал о религиях мира  " align = center  > 
+                    <h2>Что такое религия <br>и зачем она людям?</h2>
+                    <p class="subtitle">Путешествие сквозь века и культуры в поисках ответа на главные вопросы бытия</p>
+                </div>
+
+                <section class="content-section" id="about-religion">
+                    <a name="about-religion"></a>
+                    <h2><i class="fas fa-question-circle"></i> Что такое религия?</h2>
+                    <p><strong>Религия</strong> (от лат. <em>religio</em> — «связь, благочестие») — это не просто набор обрядов и догматов. Это <strong>глубинная связь</strong> человека с чем-то бóльшим, чем он сам. Это попытка осмыслить своё место в бесконечной вселенной.</p>
+                    <div class="highlight-box gold">
+                        <i class="fas fa-lightbulb"></i>
+                        <strong>Ключевая идея:</strong> Религия отвечает на три главных вопроса человечества: «Откуда мы пришли?», «Зачем мы здесь?» и «Куда мы идём?». Она даёт <strong>смысл</strong> и <strong>надежду</strong>.
+                    </div>
+                    <p>В разных культурах ответы на эти вопросы звучат по-разному, но все они объединены одним — <strong>стремлением к гармонии</strong> с собой, с другими людьми и с миром.</p>
+                    <div class="card-grid-2">
+                        <div class="mini-card"><h4><i class="fas fa-heart"></i> Вера</h4><p>Глубокое доверие к высшим силам, которое наполняет жизнь смыслом и уверенностью.</p></div>
+                        <div class="mini-card"><h4><i class="fas fa-hands-helping"></i> Нравственность</h4><p>Религия даёт моральные ориентиры, учит доброте, состраданию и справедливости.</p></div>
+                        <div class="mini-card"><h4><i class="fas fa-users"></i> Общность</h4><p>Вера объединяет людей в общины, создаёт чувство принадлежности и поддержки.</p></div>
+                        <div class="mini-card"><h4><i class="fas fa-pray"></i> Смысл</h4><p>Помогает переживать трудные моменты, дает надежду и внутреннюю опору.</p></div>
+                    </div>
+                </section>
+
+                <section class="content-section" id="history">
+                    <a name="history"></a>
+                    <h2><i class="fas fa-history"></i> Как появилась религия?</h2>
+                    <p><strong>Самые древние религиозные практики</strong> возникли более 100 000 лет назад. Первобытные люди верили в духов природы, почитали животных и явления природы. Это было началом <strong>духовного пути</strong> человечества.</p>
+                    <div class="quote-block">
+                        <i class="fas fa-quote-left"></i>
+                        <p>«Человек — это единственное существо, которое ищет смысл там, где его, казалось бы, нет. И в этом его величие.»</p>
+                        <footer>— Из философского трактата</footer>
+                    </div>
+                    <p>С развитием цивилизаций религии становились более сложными. Появились <strong>монотеизм</strong> (вера в одного Бога), <strong>политеизм</strong> (вера во многих богов) и <strong>нетеистические традиции</strong> (например, буддизм).</p>
+                    <ul class="reference-list">
+                        <li><strong>Иудаизм</strong> — одна из древнейших монотеистических религий (ок. 2000 лет до н.э.)</li>
+                        <li><strong>Буддизм</strong> — возник в VI веке до н.э. как путь освобождения от страданий</li>
+                        <li><strong>Христианство</strong> — появилось в I веке н.э., принесло идею всеобщей любви</li>
+                        <li><strong>Ислам</strong> — возник в VII веке н.э., провозгласил единство Бога и братство людей</li>
+                    </ul>
+                </section>
+
+                <section class="content-section" id="humanism">
+                    <a name="humanism"></a>
+                    <h2><i class="fas fa-hand-holding-heart" style="color: var(--accent-sage);"></i> Гуманизм религий: мудрость, мир и сострадание</h2>
+                    <p><strong>В основе всех великих религий лежат одни и те же ценности:</strong> любовь к ближнему, сострадание, забота о слабых и стремление к миру. Религии учат человека быть <strong>лучше</strong> и видеть в каждом ближнем брата или сестру.</p>
+                    <div class="highlight-box sage">
+                        <i class="fas fa-leaf"></i>
+                        <strong>Главная заповедь всех религий:</strong> «Относись к другим так, как хочешь, чтобы относились к тебе». Это <strong>золотое правило нравственности</strong> — основа гуманизма в любой вере.
+                    </div>
+                    <h3 style="color: var(--accent-terracotta);"><i class="fas fa-cross"></i> Гуманизм в христианстве</h3>
+                    <p>Христианство провозглашает <strong>безусловную любовь</strong> ко всем людям, независимо от их происхождения и веры. Иисус Христос учил: <em>«Любите врагов ваших, благословляйте проклинающих вас»</em>. Христианские заповеди призывают к <strong>милосердию, прощению и заботе о бедных</strong>.</p>
+                    <ul class="reference-list">
+                        <li><strong>Заповедь любви:</strong> «Возлюби ближнего твоего, как самого себя»</li>
+                        <li><strong>Милосердие:</strong> Помощь больным, голодным, странникам</li>
+                        <li><strong>Прощение:</strong> «Прощайте, и прощены будете»</li>
+                        <li><strong>Социальное служение:</strong> Благотворительные организации, больницы, приюты</li>
+                    </ul>
+                    <h3 style="color: var(--accent-sage);"><i class="fas fa-star-and-crescent"></i> Гуманизм в исламе</h3>
+                    <p><strong>Ислам учит милосердию и справедливости.</strong> Коран многократно подчёркивает важность заботы о сиротах, бедных и путниках. Пророк Мухаммед говорил: <em>«Лучший из людей — тот, кто приносит пользу людям»</em>. В исламе запрещено принуждение в религии: <em>«Нет принуждения в вере»</em> (Коран, 2:256).</p>
+                    <ul class="reference-list">
+                        <li><strong>Милосердие:</strong> Одно из имён Аллаха — «Милостивый»</li>
+                        <li><strong>Забота о бедных:</strong> Закят (обязательная милостыня)</li>
+                        <li><strong>Запрет на убийство:</strong> «Не убивайте душу, которую Аллах запретил»</li>
+                        <li><strong>Справедливость:</strong> Равенство перед Богом всех людей</li>
+                    </ul>
+                    <h3 style="color: var(--accent-sky);"><i class="fas fa-star-of-david"></i> Гуманизм в иудаизме</h3>
+                    <p><strong>Иудаизм — религия справедливости и социальной ответственности.</strong> Тора предписывает заботиться о вдовах, сиротах и бедных. Важнейшая заповедь: <em>«Люби ближнего твоего, как самого себя»</em> (Левит 19:18). Иудаизм учит, что каждый человек создан по образу Божьему и достоин уважения.</p>
+                    <ul class="reference-list">
+                        <li><strong>Цдака:</strong> Справедливость и благотворительность</li>
+                        <li><strong>Тикун олам:</strong> Исправление мира — ответственность каждого</li>
+                        <li><strong>Уважение к ближнему:</strong> Запрет на злословие и унижение</li>
+                        <li><strong>Правосудие:</strong> Равенство всех перед законом</li>
+                    </ul>
+                    <h3 style="color: var(--accent-gold);"><i class="fas fa-dharmachakra"></i> Гуманизм в буддизме</h3>
+                    <p><strong>Буддизм — это путь сострадания и ненасилия.</strong> Первая заповедь буддизма: <em>«Не причиняй вреда живым существам»</em>. Будда учил, что все существа стремятся к счастью и заслуживают сочувствия. <strong>Метта</strong> (любящая доброта) — одна из главных практик буддизма.</p>
+                    <ul class="reference-list">
+                        <li><strong>Ненасилие (Ахимса):</strong> Отказ от причинения вреда</li>
+                        <li><strong>Сострадание (Каруна):</strong> Глубокое сопереживание всем живым существам</li>
+                        <li><strong>Равностность (Упеккха):</strong> Отсутствие привязанности и отвращения</li>
+                        <li><strong>Мудрость (Паннья):</strong> Понимание взаимосвязи всех вещей</li>
+                    </ul>
+                    <h3 style="color: var(--accent-terracotta);"><i class="fas fa-om"></i> Гуманизм в индуизме</h3>
+                    <p><strong>Индуизм — это путь единства и гармонии.</strong> Все существа — проявления единого Божественного. Индуизм учит уважению ко всем формам жизни и признанию <strong>святости каждой души</strong>. Йога и медитация помогают познать себя и соединиться с миром.</p>
+                    <ul class="reference-list">
+                        <li><strong>Ахимса:</strong> Ненасилие и уважение ко всему живому</li>
+                        <li><strong>Васудайва кутумбакам:</strong> «Вся вселенная — одна семья»</li>
+                        <li><strong>Карма-йога:</strong> Служение другим без привязанности к результату</li>
+                        <li><strong>Бхакти-йога:</strong> Путь любви и преданности Богу</li>
+                    </ul>
+                    <h3 style="color: var(--accent-sky);"><i class="fas fa-torii-gate"></i> Гуманизм в синтоизме</h3>
+                    <p><strong>Синтоизм учит гармонии с природой и предками.</strong> Вся природа священна, и человек — её часть. Синтоизм подчёркивает <strong>чистоту сердца, искренность и уважение к традициям</strong>.</p>
+                    <ul class="reference-list">
+                        <li><strong>Макото:</strong> Искренность и правдивость</li>
+                        <li><strong>Мусуби:</strong> Гармоничное взаимодействие со всем сущим</li>
+                        <li><strong>Уважение к природе:</strong> Священные рощи, горы, водопады</li>
+                        <li><strong>Почитание предков:</strong> Связь поколений</li>
+                    </ul>
+                    <div class="highlight-box gold" style="margin-top: 30px;">
+                        <i class="fas fa-balance-scale"></i>
+                        <strong>Что объединяет все религии?</strong><br>
+                        Все они учат <strong>добру, состраданию, справедливости и уважению</strong>. Разница лишь в форме, но суть одна: <strong>помогать ближним и искать свет внутри себя</strong>.
+                    </div>
+                    <div class="card-grid-2">
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-terracotta);"><h4><i class="fas fa-heart" style="color: var(--accent-terracotta);"></i> Христианство</h4><p><strong>«Возлюби ближнего твоего, как самого себя»</strong> — основа нравственности.</p></div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sage);"><h4><i class="fas fa-heart" style="color: var(--accent-sage);"></i> Ислам</h4><p><strong>«Никто из вас не уверует, пока не пожелает брату своему того же, что и себе»</strong></p></div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sky);"><h4><i class="fas fa-heart" style="color: var(--accent-sky);"></i> Буддизм</h4><p><strong>«Не причиняй вреда живым существам»</strong> — основа сострадания.</p></div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-gold);"><h4><i class="fas fa-heart" style="color: var(--accent-gold);"></i> Иудаизм</h4><p><strong>«Не делай другим того, что ненавистно тебе»</strong> — золотое правило.</p></div>
+                    </div>
+                </section>
+
+                <section class="content-section" id="meaning">
+                    <a name="meaning"></a>
+                    <h2><i class="fas fa-user-circle"></i> Какое место занимает человек?</h2>
+                    <p>В каждой религии человек занимает <strong>уникальное положение</strong>. Он не просто часть природы — он <strong>со-творец</strong>, способный менять мир к лучшему.</p>
+                    <div class="highlight-box sky" style="border-left-color: var(--accent-sky);">
+                        <i class="fas fa-leaf" style="color: var(--accent-sky);"></i>
+                        <strong>Взгляд на человека:</strong> Мы не случайные существа в бездушной вселенной. Мы — <strong>часть великого замысла</strong>, носители разума, любви и ответственности перед будущим.
+                    </div>
+                    <div class="card-grid-2">
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-terracotta);"><h4>ߌѠ<span style="color: var(--accent-terracotta);">Ученик</span></h4><p>Человек учится всю жизнь, приближаясь к мудрости и совершенству.</p></div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sky);"><h4>ߌʠ<span style="color: var(--accent-sky);">Проводник</span></h4><p>Мы проводим божественный свет в мир через добрые дела и заботу.</p></div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-gold);"><h4>ߔŠ<span style="color: var(--accent-gold);">Творец</span></h4><p>Каждый из нас создаёт свою реальность мыслями, словами и поступками.</p></div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sage);"><h4>❤️ <span style="color: var(--accent-sage);">Друг</span></h4><p>Мы призваны быть опорой друг для друга, проявлять сострадание и любовь.</p></div>
+                    </div>
+                    <div class="quote-block" style="background: var(--bg-card); border: 2px solid var(--border-color);">
+                        <p style="font-family: var(--font-sans); font-style: normal; font-size: 1.1rem;"><i class="fas fa-star" style="color: var(--accent-gold);"></i> Вне зависимости от веры, все религии учат одному: <strong>человек ценен сам по себе</strong>, его жизнь имеет смысл, а его душа стремится к свету.</p>
+                    </div>
+                </section>
+
+                <section class="content-section" id="non-believers">
+                    <a name="non-believers"></a>
+                    <h2><i class="fas fa-hand-holding-heart"></i> Для тех, кто ищет свой путь</h2>
+                    <p><strong>Вера — это не обязательство, а личный выбор.</strong> Мир устроен так, что каждый человек волен искать истину там, где чувствует отклик. Если вы сомневаетесь или потеряли веру — это <strong>нормально</strong>. Вот несколько философских направлений, которые помогают людям осмысливать жизнь без традиционной религии:</p>
+                    <div class="card-grid-2">
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sky);"><h4><i class="fas fa-atom"></i> Атеизм</h4><p>Отсутствие веры в сверхъестественное. Мир познаваем через науку и разум. Человек сам творит свою судьбу.</p><a href="c_at.html"     target =_blank >&nbsp; - Атеизм.</a></div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-lavender);"><h4><i class="fas fa-question"></i> Агностицизм</h4><p>Позиция, что существование Бога невозможно доказать или опровергнуть. Это честный взгляд на границы познания.</p><a href="c_agno.html"   target =_blank >&nbsp; - Агностицизм.</a></div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-gold);"><h4><i class="fas fa-cubes"></i> Материализм</h4><p>Единственная реальность — материя. Сознание — продукт работы мозга. Смысл жизни в самореализации и счастье.</p><a href="c_mat.html"    target =_blank >&nbsp; - Материализм.</a></div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-terracotta);"><h4><i class="fas fa-brain"></i> Идеализм</h4><p>Первична идея, дух, сознание. Материя — лишь отражение высшего разума. Человек — мыслящая частица вселенной.</p><a href="c_idl.html"    target =_blank >&nbsp; - Идеализм.</a></div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sage);"><h4><i class="fas fa-search"></i> Скептицизм</h4><p>Критическое отношение к любым утверждениям. Важно проверять и сомневаться — так рождается истина.</p><a href="c_scept.html"  target =_blank >&nbsp; - Скептицизм.</a></div>
+                        <div class="mini-card" style="border-left: 3px solid #8e7a6b;"><h4><i class="fas fa-ban"></i> Нигилизм</h4><p>Отрицание объективного смысла. Однако нигилизм может стать отправной точкой для создания своих собственных ценностей.</p><a href="c_nig.html"    target =_blank >&nbsp; - Нигилизм.</a></div>
+                        <div class="mini-card" style="border-left: 3px solid #b87a6b;"><h4><i class="fas fa-smile-wink"></i> Цинизм</h4><p>Недоверие к искренности людских поступков. Но цинизм — это защита, за которой часто скрывается чуткая душа.</p><a href="c_cin.html"    target =_blank >&nbsp; - Цинизм.</a></div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-gold);"><h4><i class="fas fa-balance-scale"></i> Нравственность</h4><p>Даже без религии можно быть нравственным человеком. Доброта, честность и сострадание — универсальные ценности.</p><a href="c_nrav.html"   target =_blank >&nbsp; - Нравственность.</a></div>
+                        <div class="mini-card" style="border-left: 3px solid var(--accent-sky);"><h4><i class="fas fa-heart"></i> Совесть</h4><p>Внутренний голос, который помогает отличать добро от зла. Совесть не требует религии — она врождённая.</p><a href="c_sov.html"    target =_blank >&nbsp; - Совесть.</a></div> 
+                    </div>
+                    <div class="highlight-box gold" style="border-left-color: var(--accent-sky);">
+                        <i class="fas fa-sun" style="color: var(--accent-gold);"></i>
+                        <strong>Главное:</strong> Путь к истине у каждого свой. Кто-то находит её в храме, кто-то — в науке, кто-то — в искусстве, а кто-то — в тишине собственного сердца. <strong>Не бойтесь искать</strong> — это и есть главное приключение жизни.
+                    </div>
+                </section>
+
+                <section class="content-section" id="basics">
+                    <a name="basics"></a>
+                    <h2><i class="fas fa-globe"></i> Основы мировых религий</h2>
+                    <h3><i class="fas fa-users" style="color: var(--accent-terracotta);"></i> Количество последователей</h3>
+                    <div class="stat-grid">
+                           <a href="c_kol_posl.html"  target =_blank>Примерное количество последователей разных религий.</a>
+                    </div>
+                    <h3><i class="fas fa-book" style="color: var(--accent-terracotta);"></i> Священные книги</h3>
+                    <ul class="reference-list">
+                        <li><strong>Библия</strong> — священное писание христиан (Ветхий и Новый Завет)</li>
+                        <li><strong>Коран</strong> — главная книга ислама, откровение пророка Мухаммеда</li>
+                        <li><strong>Тора</strong> (Пятикнижие) — основа иудаизма, часть Ветхого Завета</li>
+                        <li><strong>Талмуд</strong> — свод законов и традиций иудаизма</li>
+                        <li><strong>Веды</strong> — древнейшие священные тексты индуизма</li>
+                        <li><strong>Трипитака</strong> (Палийский канон) — буддийское священное писание</li>
+                        <li><strong>Авеста</strong> — священные тексты зороастризма</li>
+                        <li><strong>Гуру Грантх Сахиб</strong> — священная книга сикхизма</li>
+                    </ul>
+                    <a href="osn_reg_kn.html"  target =_blank>Краткий обзор основных священных книг.</a>
+                    <h3><i class="fas fa-calendar-check" style="color: var(--accent-terracotta);"></i> Главные праздники</h3>
+                    <ul class="reference-list">
+                         <a href="osn_reg_pr.html"  target =_blank>Главные события и праздники.</a>
+                    </ul>
+                    <h3><i class="fas fa-praying-hands" style="color: var(--accent-terracotta);"></i> Основные обряды</h3>
+                    <ul class="reference-list">
+                         <a href="osn_reg_obr.html" target =_blank>Основные обряды .</a>
+                    </ul>
+                    <h3><i class="fas fa-crown" style="color: var(--accent-terracotta);"></i> Папы Римские (избранные)</h3>
+                    <div class="person-list">
+                          <a href="papi_rim.html"    target =_blank>Папы Римские и их времена ...</a>
+                    </div>
+                    <h3><i class="fas fa-church" style="color: var(--accent-terracotta);"></i> Патриархи Русской православной церкви</h3>
+                    <div class="person-list">
+                          <a href="papi_rus.html"    target =_blank>Патриархи Русской православной церкви и их времена ...</a>
+                    </div>
+                </section>
+  
+                <section class="content-section" id="references">
+                    <a name="references"></a>
+                    <h2><i class="fas fa-link"></i> Полезные ресурсы</h2>
+                    <p><strong>Официальные сайты и онлайн-библиотеки</strong> для углублённого изучения религий и священных текстов:</p>
+                    <h3><i class="fas fa-globe" style="color: var(--accent-terracotta);"></i> Официальные сайты</h3>
+                    <ul class="reference-list">
+                        <li><a href="https://www.vatican.va" target="_blank">Ватикан</a> — официальный сайт Святого Престола</li>
+                        <li><a href="https://www.patriarchia.ru" target="_blank">Русская православная церковь</a> — официальный сайт РПЦ</li>
+                        <li><a href="https://www.islamicrelief.org" target="_blank">Islamic Relief</a> — международная исламская организация</li>
+                        <li><a href="https://www.chabad.org" target="_blank">Chabad</a> — иудаизм, образование и община</li>
+                        <li><a href="https://www.buddhanet.net" target="_blank">BuddhaNet</a> — буддийский образовательный портал</li>
+                        <li><a href="https://www.hinduismtoday.com" target="_blank">Hinduism Today</a> — индуизм, культура и философия</li>
+                    </ul>
+                    <h3><i class="fas fa-book-open" style="color: var(--accent-terracotta);"></i> Священные тексты онлайн</h3>
+                    <ul class="reference-list">
+                        <li><a href="https://www.bibleonline.ru" target="_blank">Библия онлайн</a> — Синодальный перевод</li>
+                        <li><a href="https://quran.com" target="_blank">Коран</a> — на арабском и с переводами</li>
+                        <li><a href="https://www.torah.by" target="_blank">Тора</a> — на русском языке</li>
+                        <li><a href="https://www.sacred-texts.com" target="_blank">Sacred Texts</a> — крупнейшая библиотека священных книг мира</li>
+                        <li><a href="https://www.buddhist-texts.org" target="_blank">Буддийские тексты</a> — сутры и комментарии</li>
+                        <li><a href="https://www.vedictexts.org" target="_blank">Веды</a> — древние индийские писания</li>
+                    </ul>
+                    <h3><i class="fas fa-graduation-cap" style="color: var(--accent-terracotta);"></i> Образовательные ресурсы</h3>
+                    <ul class="reference-list">
+                        <li><a href="https://www.khanacademy.org/humanities/world-history" target="_blank">Khan Academy — История мировых религий</a></li>
+                        <li><a href="https://www.coursera.org/courses?query=religion" target="_blank">Coursera — Курсы по религиоведению</a></li>
+                        <li><a href="https://www.bbc.co.uk/religion" target="_blank">BBC Religion — Религиозные темы и аналитика</a></li>
+                        <li><a href="https://www.pewresearch.org/topic/religion/" target="_blank">Pew Research — Статистика и исследования религии</a></li>
+                    </ul>
+                    <div class="highlight-box gold">
+                        <i class="fas fa-heart" style="color: var(--accent-terracotta);"></i>
+                        <strong>Напутствие:</strong> Пусть ваше путешествие в мир религий будет увлекательным, познавательным и вдохновляющим. Помните: <strong>знание — свет, а терпимость — мудрость.</strong>
+                    </div>
+                </section>
+
+                <section class="content-section" id="dark-history">
+                    <a name="dark-history"></a>
+                    <h2><i class="fas fa-skull" style="color: #8a6a5a;"></i> Теневые страницы истории религий</h2>
+                    <p style="font-size: 1.05rem;"><strong>Честный взгляд на историю</strong> требует признания, что религия, как и любое человеческое явление, имеет не только светлые, но и тёмные страницы. Это не отрицает её ценности, но помогает увидеть <strong>полную картину</strong> и извлечь уроки для будущего.</p>
+                    <div class="quote-block dark">
+                        <i class="fas fa-quote-left"></i>
+                        <p>«История религий — это история величия человеческого духа и его падений. Только признавая обе стороны, мы можем двигаться вперёд.»</p>
+                        <footer>— Из исторического очерка</footer>
+                    </div>
+                    <div class="highlight-box dark-side">
+                        <i class="fas fa-balance-scale" style="color: #8a6a5a;"></i>
+                        <strong>Важно понимать:</strong> Теневые страницы — это не приговор религии, а <strong>урок для человечества</strong>. Любая идея, возведённая в абсолют, может быть искажена. Настоящая вера — это <strong>любовь, терпимость и уважение</strong>.
+                    </div>
+                    <h3 style="color: #8a6a5a;"><i class="fas fa-fire"></i> Борьба с язычеством</h3>
+                    <p><strong>Христианизация Европы</strong> часто сопровождалась насильственным уничтожением языческих святилищ, капищ и священных рощ. Варвары, принимавшие христианство, нередко вырубали священные дубы германцев и разрушали храмы славянских богов.</p>
+                    <ul class="reference-list">
+                        <li class="dark"><strong>VIII–X века:</strong> Карл Великий насильно крестил саксов, казнив тысячи сопротивлявшихся</li>
+                        <li class="dark"><strong>988 год:</strong> Крещение Руси — языческие идолы сбрасывались в реки, народ крестили принудительно</li>
+                        <li class="dark"><strong>XIII век:</strong> Орден меченосцев уничтожал языческие племена в Прибалтике</li>
+                    </ul>
+                    <h3 style="color: #8a6a5a;"><i class="fas fa-gavel"></i> Инквизиция</h3>
+                    <p><strong>Святая инквизиция</strong> (XII–XIX века) — церковный суд для борьбы с ересями. Только в Испании за 300 лет через инквизицию прошло более <strong>150 000 человек</strong>, тысячи были сожжены на кострах.</p>
+                    <ul class="reference-list">
+                        <li class="dark"><strong>1231 год:</strong> Папа Григорий IX учредил инквизицию как постоянный орган</li>
+                        <li class="dark"><strong>1478 год:</strong> Испанская инквизиция — одна из самых жестоких</li>
+                        <li class="dark"><strong>1600 год:</strong> Сожжён Джордано Бруно за идеи о бесконечности вселенной</li>
+                        <li class="dark"><strong>1633 год:</strong> Галилей отрёкся от гелиоцентрической системы под угрозой пыток</li>
+                    </ul>
+                    <h3 style="color: #8a6a5a;"><i class="fas fa-cross"></i> Крестовые походы</h3>
+                    <p><strong>Крестовые походы</strong> (1095–1291) — военные кампании под религиозными лозунгами. Они привели к массовым убийствам мусульман, евреев и даже христиан-еретиков.</p>
+                    <ul class="reference-list">
+                        <li class="dark"><strong>1099 год:</strong> Взятие Иерусалима — уничтожено 30 000 мирных жителей</li>
+                        <li class="dark"><strong>1204 год:</strong> Четвёртый крестовый поход — разграбление Константинополя</li>
+                        <li class="dark"><strong>1212 год:</strong> Крестовый поход детей — тысячи детей были проданы в рабство</li>
+                        <li class="dark"><strong>1209 год:</strong> Альбигойский крестовый поход — уничтожение еретиков на юге Франции</li>
+                    </ul>
+                    <h3 style="color: #8a6a5a;"><i class="fas fa-shield-alt"></i> Церковные ордены</h3>
+                    <p><strong>Рыцарские ордены</strong> — тамплиеры, госпитальеры, тевтонцы — были созданы для защиты Святой земли, но часто становились инструментом политических и экономических завоеваний.</p>
+                    <ul class="reference-list">
+                        <li class="dark"><strong>1119 год:</strong> Основание ордена тамплиеров</li>
+                        <li class="dark"><strong>1307 год:</strong> Разгром тамплиеров во Франции — сожжение Жака де Моле</li>
+                        <li class="dark"><strong>Тевтонский орден:</strong> Крестовые походы против пруссов и литовцев</li>
+                    </ul>
+                    <h3 style="color: #8a6a5a;"><i class="fas fa-globe-americas"></i> Завоевание Америки</h3>
+                    <p><strong>Конкиста</strong> — испанское завоевание Америки (XVI век) — было проведено под знаменем креста. Миллионы индейцев были убиты, обращены в рабство или насильно крещены.</p>
+                    <ul class="reference-list">
+                        <li class="dark"><strong>1519–1521:</strong> Кортес уничтожил империю ацтеков — десятки тысяч убитых</li>
+                        <li class="dark"><strong>1532–1533:</strong> Писарро захватил империю инков — казнь Атауальпы</li>
+                        <li class="dark"><strong>Инквизиция в Америке:</strong> Сожжение «еретиков» среди коренного населения</li>
+                        <li class="dark"><strong>Религиозные миссии:</strong> Часто были прикрытием для захвата земель и рабов</li>
+                    </ul>
+                    <h3 style="color: #8a6a5a;"><i class="fas fa-bomb"></i> Религиозные войны в Европе</h3>
+                    <ul class="reference-list">
+                        <li class="dark"><strong>1562–1598:</strong> Религиозные войны во Франции — убито до 3 миллионов человек</li>
+                        <li class="dark"><strong>1618–1648:</strong> Тридцатилетняя война — самая разрушительная, 8 миллионов жертв</li>
+                        <li class="dark"><strong>1572 год:</strong> Варфоломеевская ночь — массовое убийство гугенотов в Париже</li>
+                    </ul>
+                    <div class="highlight-box dark-side" style="margin-top: 30px;">
+                        <i class="fas fa-peace" style="color: #8a6a5a;"></i>
+                        <strong>Уроки истории:</strong> Религия не должна быть оружием. Настоящая вера — это <strong>любовь, терпимость и уважение</strong>. Использование религии для оправдания насилия — это <strong>предательство её истинной сути</strong>.
+                    </div>
+                </section>
+            </main>
+            <aside class="sidebar-right" id="sidebar-right">
+                <div class="sidebar-title">
+                    <i class="fas fa-globe-asia"></i>
+                    Религии Востока
+                </div>
+                <div class="sidebar-links">
+                    <img src="img_rel/budda.gif" align = center width= 200  height= 100  >
+                    <hr color = #036484 width =100%>
+                     <span class="link-indent"><a href="v_islam.html"   target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Ислам :</font></a></span><br>
+                    <span class="link-indent"><a href="v_vakx.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ваххабиты.</a></span><br>
+                    <span class="link-indent"><a href="v_xar.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Хариджиты.</a></span><br>
+                    <span class="link-indent"><a href="v_murd.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Мурджииты.</a></span><br>
+                    <span class="link-indent"><a href="v_sun.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сунниты.</a></span><br>
+                    <span class="link-indent"><a href="v_suf.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Суфизм.</a></span><br>
+                    <span class="link-indent"><a href="v_muir.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Мюридизм.</a></span><br>
+                    <span class="link-indent"><a href="v_shii.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Шииты.</a></span><br>
+                    <span class="link-indent"><a href="v_babi.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Бабизм.</a></span><br>
+                    <span class="link-indent"><a href="v_alidi.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Алиды.</a></span><br>
+                    <span class="link-indent"><a href="v_ism.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Исмаилиты.</a></span><br>
+                    <span class="link-indent"><a href="v_alav.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Алавиты.</a></span><br>
+                    <span class="link-indent"><a href="v_druzi.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Друзы.</a></span><br>
+                    <span class="link-indent"><a href="v_trad.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Традиционализм.</a></span><br>
+                    <span class="link-indent"><a href="v_fund.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Фундаментализм.</a></span><br>
+                    <span class="link-indent"><a href="v_mod.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Модернизм.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_budd.html"    target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Буддизм :</font></a></span><br>
+                    <span class="link-indent"><a href="v_brah.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Брахманизм.</a></span><br>
+                    <span class="link-indent"><a href="v_vedi.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Веды.</a></span><br>
+                    <span class="link-indent"><a href="v_ther.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Тхеравада.</a></span><br>
+                    <span class="link-indent"><a href="v_scbud.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Школы Буддизма.</a></span><br>
+                    <span class="link-indent"><a href="v_mah.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Махаяна.</a></span><br>
+                    <span class="link-indent"><a href="v_dzen.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Чань (Дзэн).</a></span><br>
+                    <span class="link-indent"><a href="v_joch.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Йогачара.</a></span><br>
+                    <span class="link-indent"><a href="v_mad.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Мадхъямика.</a></span><br>
+                    <span class="link-indent"><a href="v_tian.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Тяньтай.</a></span><br>
+                    <span class="link-indent"><a href="v_amid.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Амидаизм.</a></span><br>
+                    <span class="link-indent"><a href="v_hua.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Хуаянь/Кэгон.</a></span><br>
+                    <span class="link-indent"><a href="v_vadg.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ваджраяна.</a></span><br>
+                    <span class="link-indent"><a href="v_tib.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Буддизм Тибета.</a></span><br>
+                    <span class="link-indent"><a href="v_nigma.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ньингма.</a></span><br>
+                    <span class="link-indent"><a href="v_sak.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сакья.</a></span><br>
+                    <span class="link-indent"><a href="v_gel.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Гэлуг.</a></span><br>
+                    <span class="link-indent"><a href="v_kag.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Кагью.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_relkit.html"  target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Религии Китая :</font></a></span><br>
+                    <span class="link-indent"><a href="v_konf.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Конфуцианство.</a></span><br>
+                    <span class="link-indent"><a href="v_dao.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Даосизм.</a></span><br>
+                    <span class="link-indent"><a href="v_leg.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Легизм.</a></span><br>
+                    <span class="link-indent"><a href="v_moi.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Моизм. </a></span><br>
+                    <span class="link-indent"><a href="v_nat.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Натурфилософия. </a></span><br>
+                    <span class="link-indent"><a href="v_nom.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Номинализм.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_reljap.html"  target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Религии Японии :</font></a></span><br>
+                    <span class="link-indent"><a href="v_sint.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Синтоизм.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_relind.html"  target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Религии Индии :</font></a></span><br>
+                    <span class="link-indent"><a href="v_ind.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Индуизм.</a></span><br>
+                    <span class="link-indent"><a href="v_pars.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Парсизм.</a></span><br>
+                    <span class="link-indent"><a href="v_dga.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Джайнизм .</a></span><br>
+                    <span class="link-indent"><a href="v_sikx.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сикхизм.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_relir.html"   target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Религии Ирана :</font></a></span><br>
+                    <span class="link-indent"><a href="v_zoro.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Зороастризм.</a></span><br>
+                    <span class="link-indent"><a href="v_ez.html"      target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Езидизм.</a></span><br>
+                    <span class="link-indent"><a href="v_jud.html"     target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Иудаизм :</font></a></span><br>
+                    <span class="link-indent"><a href="v_geri.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Геры.</a></span><br>
+                    <span class="link-indent"><a href="v_konc.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Консервативный.</a></span><br>
+                    <span class="link-indent"><a href="v_orto.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ортодоксальный.</a></span><br>
+                    <span class="link-indent"><a href="v_refi.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Реформистский.</a></span><br>
+                    <span class="link-indent"><a href="v_has.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Хасиды.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_relafr.html"  target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Религии Африки :</font></a></span><br>
+                    <span class="link-indent"><a href="v_diasp.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Диаспорик.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_netr.html"    target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Нетрадиционные<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Религии :</font></a></span><br>
+                    <span class="link-indent"><a href="v_teos.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Теософия.</a></span><br>
+                    <span class="link-indent"><a href="v_sham.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Шаманизм.</a></span><br>
+                    <span class="link-indent"><a href="v_rast.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Растафарианство.</a></span><br>
+                    <span class="link-indent"><a href="v_vudu.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Вуду.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_reldrev.html" target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Религии Древности :</font></a></span><br>
+                    <span class="link-indent"><a href="v_relevr.html"  target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Европы.</a></span><br>
+                    <span class="link-indent"><a href="v_relmes.html"  target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Месопотамии.</a></span><br>
+                    <span class="link-indent"><a href="v_releg.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Египта.</a></span><br>
+                    <span class="link-indent"><a href="v_relam.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Америки.</a></span><br>
+                    <span class="link-indent"><a href="v_relgr.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Греции.</a></span><br>
+                    <span class="link-indent"><a href="v_reldr.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Рима.</a></span><br>
+                    <span class="link-indent"><a href="v_relsc.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Скандинавии.</a></span><br>
+                    <span class="link-indent"><a href="v_reldk.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Кельтов.</a></span><br>
+                    <span class="link-indent"><a href="v_reldc.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Славян.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <a href="v_svost.html"   target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Секты Востока :</font></a></span><br>
+                    <hr color = #036484 width =100%>
+                    <a href="v_sind.html"    target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Индии:</font></a></span><br>
+                    <span class="link-indent"><a href="v_sam.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ананда Марга.</a></span><br>
+                    <span class="link-indent"><a href="v_sbab.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Бабаджисты.</a></span><br>
+                    <span class="link-indent"><a href="v_sba.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Братство Ананда.</a></span><br>
+                    <span class="link-indent"><a href="v_sbk.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Брахма Кумарис.</a></span><br>
+                    <span class="link-indent"><a href="v_sdsc.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Движение<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Шри Чинмоя.</a></span><br>
+                    <span class="link-indent"><a href="v_izt.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Институт знаний о<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; тождественности.</a></span><br>
+                    <span class="link-indent"><a href="v_skri.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Кришнаиты.</a></span><br>
+                    <span class="link-indent"><a href="v_smbs.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Миссия<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; божественного<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; света.</a></span><br>
+                    <span class="link-indent"><a href="v_srac.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Радхасоами<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Сатсангх.</a></span><br>
+                    <span class="link-indent"><a href="v_sccb.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сатья Саи Баба.</a></span><br>
+                    <span class="link-indent"><a href="v_scj.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сахаджа-йога.</a></span><br>
+                    <span class="link-indent"><a href="v_stj.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Тантра-йога.</a></span><br>
+                    <span class="link-indent"><a href="v_stc.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Тантра-Сангха.</a></span><br>
+                    <span class="link-indent"><a href="v_strm.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Трансцедентальная<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; медитация.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_sjap.html"    target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Японии :</font></a></span><br>
+                    <span class="link-indent"><a href="v_saum.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Аум Синрикё.</a></span><br>
+                    <span class="link-indent"><a href="v_sls.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Лайф Спэйс.</a></span><br>
+                    <span class="link-indent"><a href="v_srei.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Рейки.</a></span><br>
+                    <span class="link-indent"><a href="v_sruk.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Рэй ю кай.</a></span><br>
+                    <span class="link-indent"><a href="v_sga.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сокка гаккай.</a></span><br>
+                    <span class="link-indent"><a href="v_xnx.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Хо-но хана.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_skit.html"    target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Китая :</font></a></span><br>
+                    <span class="link-indent"><a href="v_sfal.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Фалуньгун.</a></span><br>
+                    <span class="link-indent"><a href="v_smv.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Молния Востока.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_skor.html"    target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Кореи:</font></a></span><br>
+                    <span class="link-indent"><a href="v_scob.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; объединения.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_svet.html"    target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Вьетнама :</font></a></span><br>
+                    <span class="link-indent"><a href="v_skaod.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Као дай.</a></span><br>
+                    <span class="link-indent"><a href="v_sxox.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Хоа-хао.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_sfil.html"    target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Филлипин :</font></a></span><br>
+                    <span class="link-indent"><a href="v_savm.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Асоциация<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; великодушных<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; миссионеров.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_sisl.html"    target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Ислама:</font></a></span><br>
+                    <span class="link-indent"><a href="v_sbah.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Бахаизм.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_safr.html"    target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Африки:</font></a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_salad.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Аладура.</a></span><br>
+                    <span class="link-indent"><a href="v_sbap.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Бапостоло.</a></span><br>
+                    <span class="link-indent"><a href="v_smun.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Мунгики.</a></span><br>
+                    <span class="link-indent"><a href="v_sc10.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; возрождения 10-и<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; заповедей.</a></span><br>
+                    <span class="link-indent"><a href="v_schom.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Чома.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <a href="v_sneo.html"    target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Неоязыческие:</font></a></span><br>
+                    <span class="link-indent"><a href="v_sgd.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Группа<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Доброслава.</a></span><br>
+                    <span class="link-indent"><a href="v_singl.html"   target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Инглиистическая<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь.</a></span><br>
+                    <span class="link-indent"><a href="v_seg.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Схорон еж словен.</a></span><br>
+                    <span class="link-indent"><a href="v_ssd.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Школа Диворга.</a></span><br>
+                    <span class="link-indent"><a href="v_sosm.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ошмарий-чимарий.</a></span><br>
+                    <span class="link-indent"><a href="v_sud.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Удмурт вось.</a></span><br>
+                    <span class="link-indent"><a href="v_saro.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Арординери Ухт.</a></span><br>
+                    <span class="link-indent"><a href="v_srun.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - РУНвира.</a></span><br>
+                    <hr color = #036484 width =100%>
+                    <span class="link-indent"><a href="v_sage.html"    target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Движение New Age:</font></a></span><br>
+                    <span class="link-indent"><a href="v_saz.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Академия<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Золотова.</a></span><br>
+                    <span class="link-indent"><a href="v_san.html"     target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Анастасия.</a></span><br>
+                    <span class="link-indent"><a href="v_sbag.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Бажовцы.</a></span><br>
+                    <span class="link-indent"><a href="v_sbel.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Белая экология.</a></span><br>
+                    <span class="link-indent"><a href="v_szeb.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Зелёное братство.</a></span><br>
+                    <span class="link-indent"><a href="v_szeo.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Зелёный орден.</a></span><br>
+                    <span class="link-indent"><a href="v_skrs.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Крылья<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; совершенства.</a></span><br>
+                    <span class="link-indent"><a href="v_srad.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Радастея.</a></span><br>
+                    <span class="link-indent"><a href="v_spgg.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Последователи<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Григория<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Грабового.</a></span><br>
+                    <span class="link-indent"><a href="v_stet.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Тетрада.</a></span><br>
+                    <span class="link-indent"><a href="v_sxsh.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Храм Шеол.</a></span><br>
+                    <span class="link-indent"><a href="v_sced.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Центр Единение.</a></span><br>
+                    <span class="link-indent"><a href="v_scka.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Центр Кадуцей.</a></span><br>
+                    <span class="link-indent"><a href="v_scks.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Центр<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; космического<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; сознания.</a></span><br>
+                    <span class="link-indent"><a href="v_scun.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Центр Униведа.</a></span><br>
+                    <span class="link-indent"><a href="v_svse.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Школа единения<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Всеволод.</a></span><br>
+                    <span class="link-indent"><a href="v_seso.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Экология<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; сознания.</a></span><br>
+                    <span class="link-indent"><a href="v_sdgr.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Движение Грааля.</a></span><br>
+                    <span class="link-indent"><a href="v_sneb.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Небесные врата.</a></span><br>
+                    <span class="link-indent"><a href="v_snak.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Новый акрополь.</a></span><br>
+                    <span class="link-indent"><a href="v_spkk.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Последователи<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Карлоса<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Кастанеды.</a></span><br>
+                    <span class="link-indent"><a href="v_srae.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Раэлианское<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; движение.</a></span><br>
+                    <span class="link-indent"><a href="v_sfor.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Форум.</a></span><br>
+                    <span class="link-indent"><a href="v_scvt.html"    target =_self >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь всеобщая<span class="link-indent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; и торжествующая.</a></span><br>
+                    <hr color = #036484 width =100%>
+                </div>
+            </aside>
+
+        </div>
+<!-- Система голосувань ПОЧАТОК -->  
+<div align = center style="font-weight: normal; font-size: 16px; color:#000000; margin: 20px 20px 20px 20px; border: dotted 0px #006400;" >
+         <br><a href  class="btn-outline"  onClick="window.open('https://forms.gle/RruiASF35pSUSdvZA','_blank','menubar=0, toolbar=0,location=0,directories=0,status=0,menubar=1,scrollbars=1,resizable=1,width=500,height=800')">Как Вам этот Сайт ?.</a>&nbsp;&nbsp;&nbsp; 
+                <a href  class="btn-outline"  onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSds6nRkXxRVRGLpVUgsmsRroJm7CLDXippXteMwLV52aGgZ1g/viewanalytics','_blank','menubar=0, toolbar=0,location=0,directories=0,status=0,menubar=1,scrollbars=1,resizable=1,width=500,height=800')">Результаты оценивания этого Сайта.</a><br>
+</div><br> 
 <style>
 .btn-outline {
   display: inline-block;
@@ -40,500 +716,7 @@
   background-color: #006400;
   color: #ffffff;
 }
-</style>
-</head>
-
-<body  onload="start(document.forms[0])" onunload="cleartids()" >
-
-<Script language="JavaScript">
-function GoBack() {
-        if (confirm("Are you sure you want to go to the previous page?")) {
-                history.back()
-        }
-    }
-
-timestr = "00:00:00";
-tid = 0;
-pause = 0;
-var to;
-var bcount;
-var tcount;
-
-function writer(){
-document.write("test"); 
-}
-
-function time(n) {
-    tid=window.setTimeout("time(1)",to);
-    today = new Date()
-    if(today.getMinutes() < 10){ 
-        pad = "0"}
-    else  
-    pad = "";
-    if(today.getSeconds() < 10){ 
-        pads = "0"}
-    else  
-    pads = "";
-timestr=today.getHours()+":"+pad+today.getMinutes()+":"+pads+today.getSeconds();
-                f.result.value = timestr;
-                window.status = timestr;
-  window.clearTimeout(tid);
-  tid=window.setTimeout("time()",to);
-}
-
-function start(x) {
-  f=x;
-                to=60;
-  time(x);
-  }
-
-function cleartids() {
- window.clearTimeout(tid);}
-</script>
-    <div id="header">
-         <! Заголовок страницы. >
-         <table align = center border=0 cellspacing=3 cellpadding=3 width="100%" bgcolor= white >
-                <tr>
-                    <td width = 200 align = center   valign=top >
-                    <img src="./img_rel/nebo.gif" alt=" Образовательный портал о религиях мира  " align = left width= 200  height= 100  > 
-                    </td>
-                    <td width = *   align = center valign=middle ><a href="index.html
-" target =_self ><h1 ><strong>Образовательный портал <br> о религиях мира  </strong></h1></a></td>
-                    <td width = 300 align = center valign=middle >
-                        <div align = "center">
-                             <Script language="JavaScript">
-                                     var now = new Date();
-                                     var days = new Array(' Воскресенье ',' Понедельник ',' Вторник ',' Среда ',' Четверг ',' Пятница ',' Суббота ');
-                                     var months = new Array(' Января ',' Февраля ',' Марта ',' Апреля ',' Мая ',' Июня ',' Июля ',' Августа ',' Сентябрь',' Октября  ',' Ноября ',' Декабря ');
-                                     var date = ((now.getDate()<10) ? "0" : "")+ now.getDate();
-                                     function fourdigits(number)	{ return (number < 1000) ? number + 1900 : number; }
-                                     today =  days[now.getDay()]+ " " +date + " " +months[now.getMonth()] + "  " +(fourdigits(now.getYear())) + " года";
-                                     document.write("<br>" +"<font color =#ffff99 >"+today+ "."+"</font>");
-                             </script>
-                             <form name="time">
-                                   <input type="text" size="14px" maxlength= 10 name="result"  onfocus="this.blur()"  style="text-align: center; font-size: 14px; color: #000000; font-weight:bold; border: 0px inset #000000; ">
-                            </form>
-                        </div>
-                    </td>
-                </tr>
-         </table>
-    </div>
-
-    <div id="undernav">
-         <! Горизонтальное подменю.>
-         <a href="index.html
-"   target = _self >Главная страница.</a> | 
-    </div>
-<!-- -->
-<div  align = center style="font-size:15px;  color:#000000;">
-        <!Links> 
-</div> 
-<!-- --> 
-
-<! Центральная часть страницы.>
-<div align = "justify" >
-     <table align = center border=0 cellspacing=3 cellpadding=3 width=100% bgcolor= white >
-            <tr>
-                <td width = 200 align = left valign=top >
-                    <div align=center>
-                    <img src="./img_rel/krest_ruki.gif" align = middle width= 200  height= 100  >
-                    </div>
-                    <hr color = #036484 width =100%>
-                        <a href="#" target =_self ><font color = #036484 size =+1 ><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Религии Запада.</strong></font> </a>
-                    <hr color = #036484 width =100%>
-                        <a href="x_pravosl.html"  target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Православные церкви:</font> </a>
-                    <br><a href="x_alb.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Албанская.</a>
-                    <br><a href="x_alex.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Александрийская.</a>
-                    <br><a href="x_amer.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Американская.</a>
-                    <br><a href="x_antiox.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Антиохийская.</a>
-                    <br><a href="x_bolg.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Болгарская.</a>
-                    <br><a href="x_gruz.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Грузинская.</a>
-                    <br><a href="x_ierus.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Иерусалимская.</a>
-                    <br><a href="x_kipr.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Кипрская.</a>
-                    <br><a href="x_konst.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Константинополь.</a>
-                    <br><a href="x_pol.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Польская.</a>
-                    <br><a href="x_rum.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Румынская.</a>
-                    <br><a href="x_rus.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Русская.</a>
-                    <br><a href="x_bel.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Белорусская.</a>
-                    <br><a href="x_kit.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Китайская.</a>
-                    <br><a href="x_lat.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Латвийская.</a>
-                    <br><a href="x_mold.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Молдавская.</a>
-                    <br><a href="x_rus_z.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Русская<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; за границей.</a>
-                    <br><a href="x_ukr.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Украинская.</a>
-                    <br><a href="x_est.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Эстонская (МП).</a>
-                    <br><a href="x_serb.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сербская.</a>
-                    <br><a href="x_cheh.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Чехословацкая.</a>
-                    <br><a href="x_ell.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Элладская.</a>
-                    <br><a href="x_krit.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Критская.</a>
-                    <br><a href="x_sin.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Синайская.</a>
-                    <br><a href="x_fin.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Финляндская.</a>
-                    <br><a href="x_jap.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Японская.</a>
-                    <br><a href="x_staro.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Старообрядчество:</font></a>
-                    <br><a href="x_dpc.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Древле-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; православная <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Поморская<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь. </a>
-                    <br><a href="x_rdc.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Русская древле-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; православная<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь. </a>
-                    <br><a href="x_rpcc.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Русская <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; православная <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;старообрядческая<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь. </a>
-                    <br><a href="x_ne_canon.html" target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Неканоническое<br>&nbsp;&nbsp; православие:</font></a>
-                    <br><a href="x_bac.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Белорусская <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;автокефальная<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь. </a>
-                    <br><a href="x_katc.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Катакомбная <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;церковь. </a>
-                    <br><a href="x_makpc.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Македонская <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;православная<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь. </a>
-                    <br><a href="x_rpac.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Российская<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; православная <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;автономная<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь. </a>
-                    <br><a href="x_rpci.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Русская<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; православная <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;церковь<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; в изгнании. </a>
-                    <br><a href="x_bstc.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Болгарская <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;старостильная<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь. </a>
-                    <br><a href="x_gstc.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Греческая <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;старостильная<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь. </a>
-                    <br><a href="x_rstc.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Румынская <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;старостильная<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь. </a>
-                    <br><a href="x_uac.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Украинская<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; автокефальная<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  церковь. </a>
-                    <br><a href="x_upc_kp.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Украинская<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; православная<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь (КП). </a>
-                    <br><a href="x_doh.html"      target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Дохалкидонские<br>&nbsp;&nbsp; церкви:</font></a>
-                    <br><a href="x_monof.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Монофизиты. </a>
-                    <br><a href="x_sia.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сиро-яковитская.</a>
-                    <br><a href="x_aac.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Армянская<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Апостольская.</a>
-                    <br><a href="x_copt.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Коптская.</a>
-                    <br><a href="x_ef.html"       target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Эфиопская.</a>
-                    <br><a href="x_nest.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Несториане.</a>
-                    <br><a href="x_assir.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ассирийская. </a>
-                    <hr color = #036484 width =100%>
-                        <a href="x_prot.html"     target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Протестантство:</font> </a>
-                    <br><a href="x_asd.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Адвентисты<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Седьмого Дня. </a>
-                    <br><a href="x_angl.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Англиканская<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь. </a>
-                    <br><a href="x_bapt.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Баптизм. </a>
-                    <br><a href="x_vald.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Вальденсы. </a>
-                    <br><a href="x_evx.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Евангельские <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;христиане. </a>
-                    <br><a href="x_kalv.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Кальвинизм. </a>
-                    <br><a href="x_kvak.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Квакеры. </a>
-                    <br><a href="x_lut.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Лютеранство. </a>
-                    <br><a href="x_menn.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Меннонизм. </a>
-                    <br><a href="x_met.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Методизм. </a>
-                    <br><a href="x_morm.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Мормоны. </a>
-                    <br><a href="x_presv.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Пресвитерианство. </a>
-                    <br><a href="x_piati.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Пятидесятники. </a>
-                    <br><a href="x_xar.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Харизматы. </a>
-                    <br><a href="x_pos_b.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Посольство Божье. </a>
-                    <br><a href="x_uxr.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ученики Христа. </a>
-                    <br><a href="x_kat.html"      target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Католичество:</font> </a>
-                    <br><a href="x_rim_k.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Римско-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;католическая <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;церковь. </a>
-                    <br><a href="x_vost_k.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Восточно-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;католические <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;церкви. </a>
-                    <br><a href="x_st_kat.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Старокатолики. </a>
-                    <hr color = #036484 width =100%>
-                        <a href="index.html
-" target =_self >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Другие направления :</font> </a>
-                    <br><a href="x_bogc.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Богородичный<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; центр. </a>
-                    <br><a href="x_detb.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Дети Бога <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(организация). </a>
-                    <br><a href="x_unit.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Унитарии. </a>
-                    <br><a href="x_sveg.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Свидетели Иеговы. </a>
-                    <br><a href="x_xrd.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Христадельфиане. </a>
-                    <br><a href="x_duh.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Духоборы. </a>
-                    <br><a href="x_moloc.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Молокане. </a>
-                    <br><a href="x_nc.html"       target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Новая церковь. </a>
-                    <br><a href="x_tolst.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Толстовцы. </a>
-                    <br><a href="x_sub.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Субботники. </a>
-                    <br><a href="x_eg.html"       target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ересь<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; жидовствующих. </a>
-                    <hr color = #036484 width =100%>
-                        <a href="x_sect.html"     target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Сектанство:</font> </a>
-                    <hr color = #036484 width =100%>
-                        <a href="x_zs.html"       target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Западные секты:</font> </a>
-                    <br><a href="x_vd.html"       target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ветвь Давидова.</a>
-                    <br><a href="x_nh.html"       target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Народный храм.</a>
-                    <br><a href="x_zoxr.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Орден Храма<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; солнца.</a>
-                    <br><a href="x_rast.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Растафарианство.</a>
-                    <br><a href="x_saent.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Саентология.</a>
-                    <br><a href="x_sava.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Савайвалисты.</a>
-                    <br><a href="x_semia.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Семья.</a>
-                    <br><a href="x_xn.html"       target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Христианская<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; наука.</a>
-                    <br><a href="x_uu.html"       target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Унитарно-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; универсалисткая.</a>
-                    <br><a href="x_rs.html"       target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Русские секты:</font> </a>
-                    <br><a href="x_bb.html"       target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Белое братство.</a>
-                    <br><a href="x_iv.html"       target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ивановцы.</a>
-                    <br><a href="x_rbg.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ревнители<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; благочестия.</a>
-                    <br><a href="x_sdb.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Семья детей Бога.</a>
-                    <br><a href="x_adam.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь адамитов.</a>
-                    <br><a href="x_co.html"       target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Откровения.</a>
-                    <br><a href="x_cpz.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; последнего<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; завета.</a>
-                    <br><a href="x_cfot.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Фотинии.</a>
-                    <br><a href="x_chur.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Чуриковцы.</a>
-                    <br><a href="x_kvzd.html"     target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Квазиденоминации:</font> </a>
-                    <br><a href="x_adv.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Адвентисты.</a>
-                    <br><a href="x_vcb.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Всемирная<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь Бога.</a>
-                    <br><a href="x_dv.html"       target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Движение веры.</a>
-                    <br><a href="x_nova.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Новоапостольская<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь.</a>
-                    <br><a href="x_pomc.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Поместная<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь.</a>
-                    <br><a href="x_ch.html"       target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь Христа.</a>
-                    <br><a href="x_sata.html"     target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Сатанизм:</font> </a>
-                    <br><a href="x_brman.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Братство Мадра.</a>
-                    <br><a href="x_kris.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Крысятницы.</a>
-                    <br><a href="x_osat.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Общество сатаны.</a>
-                    <br><a href="x_sinlot.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Синий лотос.</a>
-                    <br><a href="x_cnavi.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь Нави.</a>
-                    <br><a href="x_grkv.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Группы культа<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Вуду".</a>
-                    <br><a href="x_cuni.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Центр "Юнивер".</a>
-                    <br><a href="x_zelor.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - "Зеленый орден".</a>
-                    <br><a href="x_chera.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Черный ангел.</a>
-                    <br><a href="x_cherbr.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Черное братство.</a>
-                    <br><a href="x_cherd.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Черный дракон.</a>
-                    <br><a href="x_ugkr.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Южный крест.</a>
-                    <br><a href="x_luc.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Люциферизм.</a>
-                    <br><a href="x_xrc.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Храм Сета.</a>
-                    <br><a href="x_csat.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь сатаны.</a>
-                    <br><a href="x_okk.html"      target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Оккультизм:</font> </a>
-                    <br><a href="x_antro.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Антропософия.</a>
-                    <br><a href="x_germ.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Герметизм.</a>
-                    <br><a href="x_kab.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Каббализм.</a>
-                    <br><a href="x_mag.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Магия.</a>
-                    <br><a href="x_mant.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Мантика.</a>
-                    <br><a href="x_mas.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Масонство.</a>
-                    <br><a href="x_roz.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Розенкрейцеры.</a>
-                    <br><a href="x_spir.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Спиритизм.</a>
-                    <hr color = #036484 width =100%>
-                </td> 
-<!->
-                <td width = *   align = justify  valign=top >
-                    <img src="./img_rel/bog.gif" align = left width= 100  height= 163> 
-                     <div align = right > <font color = #ffff99   size =+1 ><strong>Бог един, хотя может быть много разных вер ... &nbsp;&nbsp;&nbsp;</strong></font></div><br>
-                     <div align = center style="font-size:18px;  color: #0000ff;"><strong>ВНИМАНИЕ ! Сайт на СМАРТФОНЕ желательно просматривать в горизонтальном положении смартфона ! &nbsp;&nbsp;&nbsp;</strong></div>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В начале третьего  тысячелетия современной цивилизации все 
- из живущих на земле миллиардов людей верят. Одни верят в Бога, другие — в то, что
-Его нет; люди верят в прогресс, справедливость, разум. Вера является важнейшей
-частью мировоззрения человека, его жизненной позицией, убеждением, этическим и
-нравственным правилом, нормой и обычаем, по которым — точнее, внутри которых —
-он живёт: действует, мыслит и чувствует.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Вера — универсальное свойство
-человеческой природы. Современная наука полагает, что “человек разумный”
-появился 30—40 тыс. лет назад. Примерно к тому же времени относятся
-обнаруженные учёными наскальные рисунки и предметы быта, уже подразумевающие
-существование веры.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Конечно, этих находок явно
-недостаточно, чтобы ответить на вопрос, во что именно верили наши далёкие
-предки, но с их помощью можно попытаться представить, как и почему рождалась
-вера вообще.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Несомненно, человек — часть
-природы. Одни и те же химические элементы слагают его тело и тела животных,
-деревья, воды Мирового океана, горные породы. Человек связан с окружающим миром
-такими крепчайшими канатами, как воздух, вода, пища, солнечный свет,
-необходимые для поддержания жизни. Человек участвует в вечном круговороте
-вещества в природе, и древний человек чувствовал это острее и чётче, чем
-современный. Это ощущение сохранено им даже в языке: например, по-русски
-рождающая земля — природа; земля, на которой родились и умерли предки, —
-родина; люди, живущие на ней, — народ. Люди рождаются, дают жизнь новым
-поколениям, а потом умирают, и тела их разрушаются, переходят из живого в
-неживое — так же, как звери, птицы, деревья и травы.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но человек обладает сознанием, поэтому он — не только
-“природное” существо. Стать человеком — значит обрести способность “осознавать”
-себя, т. е. видеть и чувствовать не только свою причастность этому миру, но и
-особенность, уникальность своего положения в нём. “Сознание” человека — это
-знание, разделённое с другими людьми, “совместное” понимание мира и места
-человека в нём. Очень важна здесь эта частичка “со-”. Опыта одного человека
-явно недостаточно, чтобы понять мир. Ребёнок учится, чтобы усвоить знания
-предыдущих поколений, и чем “старше” общество, тем дольше длится обучение.
-Необходимость трудиться сообща вынуждает перенимать опыт других и передавать
-свой, а тем самым — и обобщать его. Так в человеческом сообществе возникает
-“обобщённое” представление о мире. Другими словами, все люди, составляющие
-данное общество, знают о мире примерно одно и то же, потому что “доверяют”
-опыту соплеменников — прошлому и настоящему. Вот почему вера — это коллективное
-представление о мире.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Сознание — вот тот рубеж, то
-великое свойство, которое создало парадокс человека. Человек для природы —
-“свой”, во многом он живёт по её законам и подчиняется им. Во многом, но не во
-всём. Человек для природы — “чужой”, его сущность не сводима к одним только
-природным законам. Он способен обобщать, анализировать, находить
-закономерности, чувствовать красоту, искать смысл и цель существования — как
-собственного, так и всего мира. Он создаёт вокруг себя то, чему нет аналогов в
-природном мире, — мир человеческой культуры.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Наблюдая и осмысливая окружающий
-мир и себя в нём, человек понял, что его окружает не хаос, а упорядоченное мироздание,
-подчиняющееся так называемым законам природы. Не требовалось особой
-проницательности, чтобы понять: изменить эти законы, установить другие человек
-не в силах. Лучшие умы во все времена бились над попыткой разгадать тайну и
-смысл жизни на земле, отыскать ту безликую, таинственную силу, которая
-обнаруживает своё присутствие в мире через связь вещей и явлений; именно она
-выделила человека из природного мира. Для обозначения этой силы человек
-придумал тысячи имён, но суть их одна — это Бог.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Для общения с незримым миром
-человек прибегает к помощи “посредника” — предмета, символа, наделённого особым
-свойством — служить вместилищем незримой силы. Каменные, костяные, деревянные
-идолы, грубые и примитивные, становятся условными знаками, обозначая то, что иначе
-не может быть выражено. Важна не форма идола, важно содержание, которое видит в
-нём человек.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Так, древние греки поклонялись
-грубому, суковатому полену, олицетворявшему одну из богинь. Древние египтяне
-чтили могущественную богиню Бастет в образе кошки. Современное африканское
-племя, открытое сравнительно недавно, поклонялось пропеллеру самолёта, упавшего
-однажды с неба на их земли. Для этих людей пропеллер олицетворял невообразимую
-мощь, позволяющую чему-то огромному летать как птица и, наверное, способную
-творить и другие чудеса.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Символом родства человека с
-природным миром выступает <i>тотем. </i>У многих народов существует сложная
-система связей с теми или иными животными, считающимися предками или
-покровителями человека или коллективными предками рода.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Отделённость” человека от
-природного мира подчёркивает система <i>табу —</i> запретов, имеющих смысл
-только для человека. Для животного нет и не может быть табу — его поведение
-целиком диктуется целесообразным, рациональным. Только человек способен
-оперировать иррациональными категориями. Правда, из-за того что сейчас
-невозможно с достоверностью реконструировать мировоззрение древнего человека,
-нельзя утверждать и полную иррациональность многих табу.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Некоторые из них выглядят вполне
-рациональными. Например, табу на употребление в пищу тотема. Если тотем рода —
-кенгуру, то кенгуру есть нельзя. Но вот как могло возникнуть табу, запрещающее
-встречу женщины в период беременности с братом мужа, можно только догадываться.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Если незримая сила может
-сконцентрироваться в каком-либо предмете, то достаточно стать обладателем этого
-предмета, чтобы приобрести дополнительные возможности. Так появляется <i>фетиш,</i>
-или амулет, — предмет произвольной природы и формы (необычный камень, лапка
-убитого зверя, перо птицы), способный охранять обладателя от опасностей и бед и
-приносить ему удачу. Если беда всё же приключалась, значит, амулет утратил силу
-или перестал покровительствовать хозяину.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Истинного облика Бога не ведал
-никто, и это понятно: Бог невмещаем человеческим сознанием, иначе Он не был бы
-Богом. От Него люди получали этические законы, правила жизни, и никакой другой
-логикой, кроме божественной, эти правила не могли быть объяснены.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Наиболее показательна в этом отношении священная история
-еврейского народа. С точки зрения обычной истории заповеди, данные Богом Моисею
-на горе Синай, не имели смысла. Они могли исходить только от того, кому
-известен ход событий до самых отдалённых во времени пределов, кому известен
-смысл существования человека.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Из трёх обстоятельств — божественной воли, культурных
-традиций конкретного народа и особенностей мышления конкретного человека —
-складывается всё многообразие религиозного опыта человечества. Вера принимает
-самые различные формы, эти-то формы и называются религией. В индуизме — тысячи
-богов, в иудаизме — один, но в основе и той и другой религии лежит вера. И это
-позволяет предположить, что внешние разнообразие и пестрота культов, обрядов,
-философий многочисленных религиозных систем опираются на некоторые общие
-мировоззренческие представления.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Каким же предстаёт мир в религиозном сознании?</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Прежде всего религиозному сознанию ведомы цель и смысл
-существования мира и человека в нём — в пределах конкретной мировоззренческой
-картины. Основу этой картины в свою очередь составляет представление о
-существовании двух (или более) миров: мира зримого, земного, человеческого и
-мира незримого, духовного, божественного. У каждого из этих миров есть своя
-история, свои законы, и в каждом из них действуют люди или другие сущности, и
-каждый<span lang=EN-US style='mso-ansi-language:EN-US'> имеет свое символ</span>ическое
-выражение.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Практически все религии сходятся на том, что нынешнее
-состояние мира и самого человека ненормально, человек должен быть “спасён”.
-Спасён от чего? Спасать тело бессмысленно, поскольку весь опыт человечества
-говорит о том, что тело умрёт. Но зачем же тогда живёт человек и как находит он
-силы жить, зная о конце, которого не избежать? Многие религии учат, что земная
-жизнь человека есть жизнь временная. Одни религии воспринимают её как страдание
-и соответственно учат спасению от жизни другие учат спасению от смерти, но
-смерти куда более серьезной, чем смерть тела, — от смерти души. Представление о
-душе, дарованной Богом, о её бессмертии, о том, что духовное совершенствование
-важнее мирских забот, — основная составляющая часть многих религий.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Наличие многих религий неизбежно приводит к вопросу о том,
-какая же из них истинна. Ведь Истина должна быть одна, а религий — много. Не
-значит ли это, что верна лишь одна из них, а другие — вредны и ложны? Для
-исповедующих любую веру естественно считать свою религию единственно верной, а
-все прочие — неистинными, не ведущими к подлинному спасению.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Одним из инструментов отыскания истины человечество привыкло
-считать науку, однако вопрос об истинной вере оказывается вне её компетенции.
-Цели и задачи науки — другие. Её методы разрабатывались для познания зримого
-мира и применимы к объектам любой степени сложности, но всё же менее сложным,
-чем человек.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Можно предположить, например, что каждая из религий содержит
-какую-то часть единой Истины, и если объединить их, то удастся получить
-удовлетворяющую всех, одну-единственную, истинную религию. Попытки создать
-такую <i>синкретическую</i> (от <i>греч.</i> “соединение”) религию
-предпринимались, но приводили к парадоксу: созданное таким образом учение
-оказывалось меньше и мельче, чем религии, из фрагментов которых оно
-составлялось. <i>Экуменическое</i> движение, стремящееся объединить хотя бы
-разные направления христианства, также пока не достигло своей цели. Вопрос о
-соотношении истинного и ложного в различных религиях один из сложнейших.
-Попытаемся очертить некоторые подходы к его решению.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Первый из них заключается в том, что ни одно из великих
-вероучений не может быть совершенно ложным, иначе оно не смогло бы развиться в
-религиозные представления, существующие веками и тысячелетиями. Вместе с тем
-абсолютная истина никак не может стать достоянием человека просто потому, что
-ни один человек не является всеведущим. Не является всеведущей и какая-либо
-религия или церковь. Поэтому говорить можно лишь о степени истинности той или
-иной религии, т. е. о ступенях восхождения к абсолютной истине, а также о том,
-что каждая религия отражает ту или иную грань (или несколько граней) абсолютной
-истины, практически бесконечно многогранной.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Один из способов снятия противоречий, существующих между
-различными религиями, предлагает русский религиозный мистик Даниил Андреев. Он
-рассматривает в качестве примера одно из основных противоречий между исламом и
-христианством. Как известно, ислам — строго монотеистическая религия. Ислам
-отрицает христианский догмат о Троице, то есть о троичности Бога, поскольку
-духовный опыт основателя ислама пророка Мухаммада не подтверждает этого
-догмата. Д. Андреев пишет: “...ничей вообще опыт не может содержать
-подтверждение всех истинных идей, возникших ранее, в ходе коллективного
-человеческого богопознания и миропознания. Всякий личный опыт ограничен; только
-премудрость Всеведущего охватывает всю сумму истин „в себе&quot;. Поэтому то
-обстоятельство, что Мухаммад не пережил своим духовным опытом ничего,
-подтверждающего тезис Троичности, само по себе никак не должно служить
-аргументом для опровержения этой идеи, даже в глазах ортодоксальных мусульман.
-Вместо формулы: „Пророк, познав совершенное единство Божие, убедился в ложности
-учения о Троице&quot;, следует, по справедливости, формулировать так: „Пророк,
-познав совершенное единство Божие, не получил, однако, указаний на Троичность
-Единого&quot;”.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но понять причины возникновения
-противоречий — не значит уничтожить их, приведя все религии к некоему “общему
-знаменателю”. По-прежнему для мусульманина Бог один, и этот Бог — Аллах, а
-Иисус — только человек, один из многих пророков — как и для иудея. Христианин
-же верит, что Иисус Христос — Сам воплотившийся Бог. Христиане верят, что
-“человеку положено однажды умереть, а потом — Суд”, индуисты и буддисты говорят
-о длинной цепи перерождений каждой души.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Обратимся ещё раз к тем факторам, которые влияют на
-формирование конкретной религии. Бог говорит с каждым народом на его
-собственном языке — на языке культурных традиций народа, особенностей его
-национального характера, способа мышления и богопознания. Душа народа — тайна
-не меньшая, чем душа и личность того пророка или просветлённого, который
-передал своему народу божественное откровение. И третья, самая непостижимая
-тайна — воля Бога, открывающего Себя человеку.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Религий и систем верований на свете десятки тысяч. Раскрыть
-же внутреннюю суть конкретной религии может только душа, живущая именно этой
-верой.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Невозможно даже в краткой форме
-изложить все фрагменты истории развития той или иной религии: религиозные
-войны, крестовые походы, межрелигиозная вражда — всё это дела и стремления
-человеческие, а прикрываются они священными символами или просто красными или
-чёрными знаменами — к вопросам веры это отношения не имеет. Неразрешима задача
-найти аргументы в пользу той или иной религии. Однако нет, не было и не будет
-на земле народа, представители которого не задавали бы себе вопросов:</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Кто мы?”, </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Откуда и куда мы идём?”, </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“К чему стремимся?”. </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Где наш настоящий дом?”. </p>
-<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Возможные ответы содержат мировые и национальные религии.
-Я попытался на этом сайте сделать Образовательный портал <br> о религиях мира - может 
-мы здесь и найдем хотя бы часть ответов на эти вопросы ... </strong>
-</p>
-<div>Глубокоуважаемый Читатель ! <br>
-Я попытался создать <strong>Образовательный портал о религиях мира</strong> 
-для тех кто уже имеет свою Веру и для тех , кто еще в поисках своей Веры.
-Но тема Веры и Религии несчерпаема, поэтому я дополнительно предлагаю Вам :
-<br><a href="c_relrefs.html" target =_blank><u><strong>Ссылки на некоторые другие Религиозные Сайты.</strong></u></a>
-<br>
-<div align = right>
-Пусть всегда  с Вами будет Сила и Вера ! <br>
-Искренне Ваш - Валентин Иванович Приходько,<br>
-Украина.
-</div>
-</div>
-<hr color = #036484 width =100% align = center>
-<div align = center><font color = #036484 size =+1 ><strong>Некоторые основы мировых религий :</strong></font></div>
-<div align = center >
-<a href="c_kol_posl.html"  target =_blank>Примерное количество последователей разных религий.</a>
-<a href="osn_reg_kn.html"  target =_blank>Краткий обзор основных книг.</a>
-<a href="osn_reg_pr.html"  target =_blank>Главные события и праздники.</a>
-<a href="osn_reg_obr.html" target =_blank>Основные обряды .</a>
-<a href="papi_rim.html"    target =_blank>Папы Римские.</a>
-<a href="papi_rus.html"    target =_blank>Патриархи Русской православной церкви.</a>
-
-<hr color = #036484 width =100%>
-     <font color = #00CC00 size =+1>Те , кто уже потерял Веру ... </font><br>
-<a href="c_at.html"     target =_blank >&nbsp; - Атеизм.</a>
-<a href="c_agno.html"   target =_blank >&nbsp; - Агностицизм.</a>
-<a href="c_mat.html"    target =_blank >&nbsp; - Материализм.</a>
-<a href="c_idl.html"    target =_blank >&nbsp; - Идеализм.</a>
-<a href="c_scept.html"  target =_blank >&nbsp; - Скептицизм.</a>
-<a href="c_nig.html"    target =_blank >&nbsp; - Нигилизм.</a>
-<a href="c_cin.html"    target =_blank >&nbsp; - Цинизм.</a>
-<a href="c_nrav.html"   target =_blank >&nbsp; - Нравственность.</a>
-<a href="c_sov.html"    target =_blank >&nbsp; - Совесть.</a>
-<hr color = #036484 width =100% align = center>  
-<!-- Система голосувань ПОЧАТОК -->  
-<div align = center style="font-weight: normal; font-size: 16px; color:#000000; margin: 20px 20px 20px 20px; border: dotted 0px #006400;" >
-         <br><a href  class="btn-outline"  onClick="window.open('https://forms.gle/RruiASF35pSUSdvZA','_blank','menubar=0, toolbar=0,location=0,directories=0,status=0,menubar=1,scrollbars=1,resizable=1,width=500,height=800')">Как Вам этот Сайт ?.</a>&nbsp;&nbsp;&nbsp; 
-                <a href  class="btn-outline"  onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSds6nRkXxRVRGLpVUgsmsRroJm7CLDXippXteMwLV52aGgZ1g/viewanalytics','_blank','menubar=0, toolbar=0,location=0,directories=0,status=0,menubar=1,scrollbars=1,resizable=1,width=500,height=800')">Результаты оценивания этого Сайта.</a><br>
-</div>   
+</style>  
 <!-- Система голосувань КІНЕЦЬ --> 
 
 <!-- Лічильник , Зовнішні посилання ПОЧАТОК -->  
@@ -562,206 +745,202 @@ apsdoc.write(apsimg+"&c="+c+"&wd="+wd+"&r="+escape(apsdoc.referrer.slice(7))+" w
 </SCRIPT>
 <NOSCRIPT><img src='https://c.apserver.org.ua/?id=2316&t=0' width=88 height=31 border=0></NOSCRIPT></A>
 <!-- kinec APServer.org.ua lichylnyk -->
+<!-- Лічильник , Зовнішні посилання ПОЧАТОК -->  
 <!>
-<!>
-<!>
-<!>
-<!>
-</div>
-<hr color = #036484 width =100% align = center> 
-</div>
-<!-- Лічильник , Зовнішні посилання КІНЕЦЬ -->  
-                 </td>
-<!->
-                <td width = 200 align = left valign=top >
-                    <div align=center>
-                    <img src="./img_rel/budda.gif" align = center width= 200  height= 100  >
-                    </div>
-                    <hr color = #036484 width =100%>
-                        <a href="v_rel_v.html" target =_blank ><font color = #036484 size =+1 ><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Религии Востока.</strong></font></a>
-                    <hr color = #036484 width =100%>
-                        <a href="v_islam.html"   target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Ислам :</font></a>
-                    <br><a href="v_vakx.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ваххабиты.</a>
-                    <br><a href="v_xar.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Хариджиты.</a>
-                    <br><a href="v_murd.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Мурджииты.</a>
-                    <br><a href="v_sun.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сунниты.</a>
-                    <br><a href="v_suf.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Суфизм.</a>
-                    <br><a href="v_muir.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Мюридизм.</a>
-                    <br><a href="v_shii.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Шииты.</a>
-                    <br><a href="v_babi.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Бабизм.</a>
-                    <br><a href="v_alidi.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Алиды.</a>
-                    <br><a href="v_ism.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Исмаилиты.</a>
-                    <br><a href="v_alav.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Алавиты.</a>
-                    <br><a href="v_druzi.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Друзы.</a>
-                    <br><a href="v_trad.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Традиционализм.</a>
-                    <br><a href="v_fund.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Фундаментализм.</a>
-                    <br><a href="v_mod.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Модернизм.</a>
-                    <br><a href="v_budd.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Буддизм :</font></a>
-                    <br><a href="v_brah.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Брахманизм.</a>
-                    <br><a href="v_vedi.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Веды.</a>
-                    <br><a href="v_ther.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Тхеравада.</a>
-                    <br><a href="v_scbud.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Школы Буддизма.</a>
-                    <br><a href="v_mah.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Махаяна.</a>
-                    <br><a href="v_dzen.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Чань (Дзэн).</a>
-                    <br><a href="v_joch.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Йогачара.</a>
-                    <br><a href="v_mad.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Мадхъямика.</a>
-                    <br><a href="v_tian.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Тяньтай.</a>
-                    <br><a href="v_amid.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Амидаизм.</a>
-                    <br><a href="v_hua.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Хуаянь/Кэгон.</a>
-                    <br><a href="v_vadg.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ваджраяна.</a>
-                    <br><a href="v_tib.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Буддизм Тибета.</a>
-                    <br><a href="v_nigma.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ньингма.</a>
-                    <br><a href="v_sak.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сакья.</a>
-                    <br><a href="v_gel.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Гэлуг.</a>
-                    <br><a href="v_kag.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Кагью.</a>
-                    <br><a href="v_relkit.html"  target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Религии Китая :</font></a>
-                    <br><a href="v_konf.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Конфуцианство.</a>
-                    <br><a href="v_dao.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Даосизм.</a>
-                    <br><a href="v_leg.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Легизм.</a>
-                    <br><a href="v_moi.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Моизм. </a>
-                    <br><a href="v_nat.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Натурфилософия. </a>
-                    <br><a href="v_nom.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Номинализм.</a>
-                    <br><a href="v_reljap.html"  target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Религии Японии :</font></a>
-                    <br><a href="v_sint.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Синтоизм.</a>
-                    <br><a href="v_relind.html"  target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Религии Индии :</font></a>
-                    <br><a href="v_ind.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Индуизм.</a>
-                    <br><a href="v_pars.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Парсизм.</a>
-                    <br><a href="v_dga.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Джайнизм .</a>
-                    <br><a href="v_sikx.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сикхизм.</a>
-                    <br><a href="v_relir.html"   target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Религии Ирана :</font></a>
-                    <br><a href="v_zoro.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Зороастризм.</a>
-                    <br><a href="v_ez.html"      target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Езидизм.</a>
-                    <br><a href="v_jud.html"     target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Иудаизм :</font></a>
-                    <br><a href="v_geri.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Геры.</a>
-                    <br><a href="v_konc.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Консервативный.</a>
-                    <br><a href="v_orto.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ортодоксальный.</a>
-                    <br><a href="v_refi.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Реформистский.</a>
-                    <br><a href="v_has.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Хасиды.</a>
-                    <br><a href="v_relafr.html"  target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Религии Африки :</font></a>
-                    <br><a href="v_diasp.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Диаспорик.</a>
-                    <br><a href="v_netr.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Нетрадиционные<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Религии :</font></a>
-                    <br><a href="v_teos.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Теософия.</a>
-                    <br><a href="v_sham.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Шаманизм.</a>
-                    <br><a href="v_rast.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Растафарианство.</a>
-                    <br><a href="v_vudu.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Вуду.</a>
-                    <br><a href="v_reldrev.html" target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Религии Древности :</font></a>
-                    <br><a href="v_relevr.html"  target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Европы.</a>
-                    <br><a href="v_relmes.html"  target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Месопотамии.</a>
-                    <br><a href="v_releg.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Египта.</a>
-                    <br><a href="v_relam.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Америки.</a>
-                    <br><a href="v_relgr.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Греции.</a>
-                    <br><a href="v_reldr.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Рима.</a>
-                    <br><a href="v_relsc.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Скандинавии.</a>
-                    <br><a href="v_reldk.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Кельтов.</a>
-                    <br><a href="v_reldc.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Славян.</a>
-                    <hr color = #036484 width =100%>
-                        <a href="v_svost.html"   target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Секты Востока :</font></a>
-                    <hr color = #036484 width =100%>
-                        <a href="v_sind.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Индии:</font></a>
-                    <br><a href="v_sam.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ананда Марга.</a>
-                    <br><a href="v_sbab.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Бабаджисты.</a>
-                    <br><a href="v_sba.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Братство Ананда.</a>
-                    <br><a href="v_sbk.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Брахма Кумарис.</a>
-                    <br><a href="v_sdsc.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Движение<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Шри Чинмоя.</a>
-                    <br><a href="v_izt.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Институт знаний о<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; тождественности.</a>
-                    <br><a href="v_skri.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Кришнаиты.</a>
-                    <br><a href="v_smbs.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Миссия<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; божественного<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; света.</a>
-                    <br><a href="v_srac.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Радхасоами<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Сатсангх.</a>
-                    <br><a href="v_sccb.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сатья Саи Баба.</a>
-                    <br><a href="v_scj.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сахаджа-йога.</a>
-                    <br><a href="v_stj.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Тантра-йога.</a>
-                    <br><a href="v_stc.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Тантра-Сангха.</a>
-                    <br><a href="v_strm.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Трансцедентальная<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; медитация.</a>
-                    <br><a href="v_sjap.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Японии :</font></a>
-                    <br><a href="v_saum.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Аум Синрикё.</a>
-                    <br><a href="v_sls.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Лайф Спэйс.</a>
-                    <br><a href="v_srei.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Рейки.</a>
-                    <br><a href="v_sruk.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Рэй ю кай.</a>
-                    <br><a href="v_sga.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Сокка гаккай.</a>
-                    <br><a href="v_xnx.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Хо-но хана.</a>
-                    <br><a href="v_skit.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Китая :</font></a>
-                    <br><a href="v_sfal.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Фалуньгун.</a>
-                    <br><a href="v_smv.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Молния Востока.</a>
-                    <br><a href="v_skor.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Кореи:</font></a>
-                    <br><a href="v_scob.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; объединения.</a>
-                    <br><a href="v_svet.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Вьетнама :</font></a>
-                    <br><a href="v_skaod.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Као дай.</a>
-                    <br><a href="v_sxox.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Хоа-хао.</a>
-                    <br><a href="v_sfil.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Филлипин :</font></a>
-                    <br><a href="v_savm.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Асоциация<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; великодушных<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; миссионеров.</a>
-                    <br><a href="v_sisl.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Ислама:</font></a>
-                    <br><a href="v_sbah.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Бахаизм.</a>
-                    <br><a href="v_safr.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Африки:</font></a>
-                    <br><a href="v_salad.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Аладура.</a>
-                    <br><a href="v_sbap.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Бапостоло.</a>
-                    <br><a href="v_smun.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Мунгики.</a>
-                    <br><a href="v_sc10.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; возрождения 10-и<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; заповедей.</a>
-                    <br><a href="v_schom.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Чома.</a>
-                    <hr color = #036484 width =100%>
-                        <a href="v_sneo.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Неоязыческие:</font></a>
-                    <br><a href="v_sgd.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Группа<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Доброслава.</a>
-                    <br><a href="v_singl.html"   target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Инглиистическая<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; церковь.</a>
-                    <br><a href="v_seg.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Схорон еж словен.</a>
-                    <br><a href="v_ssd.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Школа Диворга.</a>
-                    <br><a href="v_sosm.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Ошмарий-чимарий.</a>
-                    <br><a href="v_sud.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Удмурт вось.</a>
-                    <br><a href="v_saro.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Арординери Ухт.</a>
-                    <br><a href="v_srun.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - РУНвира.</a>
-                    <br><a href="v_sage.html"    target =_blank >&nbsp;&nbsp;&nbsp;<font color = #00CC00 >Движение New Age:</font></a>
-                    <br><a href="v_saz.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Академия<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Золотова.</a>
-                    <br><a href="v_san.html"     target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Анастасия.</a>
-                    <br><a href="v_sbag.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Бажовцы.</a>
-                    <br><a href="v_sbel.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Белая экология.</a>
-                    <br><a href="v_szeb.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Зелёное братство.</a>
-                    <br><a href="v_szeo.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Зелёный орден.</a>
-                    <br><a href="v_skrs.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Крылья<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; совершенства.</a>
-                    <br><a href="v_srad.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Радастея.</a>
-                    <br><a href="v_spgg.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Последователи<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Григория<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Грабового.</a>
-                    <br><a href="v_stet.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Тетрада.</a>
-                    <br><a href="v_sxsh.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Храм Шеол.</a>
-                    <br><a href="v_sced.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Центр Единение.</a>
-                    <br><a href="v_scka.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Центр Кадуцей.</a>
-                    <br><a href="v_scks.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Центр<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; космического<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; сознания.</a>
-                    <br><a href="v_scun.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Центр Униведа.</a>
-                    <br><a href="v_svse.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Школа единения<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Всеволод.</a>
-                    <br><a href="v_seso.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Экология<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; сознания.</a>
-                    <br><a href="v_sdgr.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Движение Грааля.</a>
-                    <br><a href="v_sneb.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Небесные врата.</a>
-                    <br><a href="v_snak.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Новый акрополь.</a>
-                    <br><a href="v_spkk.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Последователи<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Карлоса<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Кастанеды.</a>
-                    <br><a href="v_srae.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Раэлианское<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; движение.</a>
-                    <br><a href="v_sfor.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Форум.</a>
-                    <br><a href="v_scvt.html"    target =_blank >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Церковь всеобщая<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; и торжествующая.</a>
-                    <hr color = #036484 width =100%>
-                </td>
-            </tr> 
-     </table>
-</div>
-
-<! Подвал >
-<hr color = #036484 width =100% align = left>
-<!-- -->  
-<div  align = center style="font-size:15px;  color:#000000;">
-        <!Links_last> 
-</div>
-<!-- -->  
- 
-<hr color = #036484 width =100% align = left>
-    <div id="footer">
+    </div>
+    <footer class="footer">
          <p align = center>
-                        Copyright © 2010-2025 г.  E-mail: <a href ="mailto:_pvi@ukr.net" target=_blank title ="Автора !!! Автора !!!." ><font color=" #036484"><strong>_pvi@ukr.net</strong></font></a>           <br>
+                        Copyright © 2010-2026 г.  E-mail: <a href ="mailto:_pvi@ukr.net" target=_blank title ="Автора !!! Автора !!!." ><font color=" #036484"><strong>_pvi@ukr.net</strong></font></a>           <br>
               <font color=" #036484"><strong>
               Все материалы на сайте предоставлены исключительно в ознакомительных и образовательных целях,
               <br>администрация сайта не претендует на их авторство и не несёт ответственности за их содержание. </strong>
               </font>
          </p>
-   </div>
-                        <div align = right >
-                            <a href="#" target = "_top"  >В Начало страницы&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        </div>
-<hr color = #036484 width =100% align = left>
-<div align = center ><a  href="#"  target = _top ><img src="bn/str_up.png"  width= 25 height=25    align=center    alt=" " title = " "></a></div> 
-<hr color = #036484 width =100% align = left>
-</body>
+    </footer>
+    <hr><br>
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav');
 
+        burger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            nav.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('open');
+            });
+        });
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+        let isLight = true;
+
+        themeToggle.addEventListener('click', function() {
+            const root = document.documentElement;
+
+            if (isLight) {
+                // ТЁМНАЯ ТЕМА
+                root.style.setProperty('--bg-primary', '#0b0a0f');
+                root.style.setProperty('--bg-secondary', '#1a1725');
+                root.style.setProperty('--bg-card', '#1e1b2a');
+                root.style.setProperty('--bg-sidebar', '#1a1725');
+                root.style.setProperty('--text-primary', '#f0ebf5');
+                root.style.setProperty('--text-secondary', '#c4b8d0');
+                root.style.setProperty('--text-muted', '#8a7a9a');
+                root.style.setProperty('--border-color', '#2c2838');
+                root.style.setProperty('--shadow-soft', '0 8px 30px rgba(0,0,0,0.3)');
+                root.style.setProperty('--shadow-hover', '0 20px 50px rgba(0,0,0,0.5)');
+                root.style.setProperty('--gradient-warm', 'radial-gradient(circle at 30% 40%, #1f1a2e, #0b0a0f 70%)');
+                document.getElementById('header').style.background = 'rgba(11, 10, 15, 0.95)';
+                document.querySelector('.header').style.borderBottomColor = '#2c2838';
+                icon.className = 'fas fa-sun';
+
+                document.querySelectorAll('.content-section p, .content-section li, .mini-card p, .reference-list li, .person-item .name, .person-item .years, .stat-item .label').forEach(el => {
+                    el.style.color = '#c4b8d0';
+                });
+                document.querySelectorAll('.content-section h2, .content-section h3, .mini-card h4, .stat-item .number, .sidebar-title, .logo, .logo-highlight').forEach(el => {
+                    el.style.color = '#f0ebf5';
+                });
+                document.querySelectorAll('.highlight-box, .quote-block, .mini-card, .stat-item, .person-item').forEach(el => {
+                    el.style.background = '#1e1b2a';
+                    el.style.borderColor = '#2c2838';
+                });
+                document.querySelectorAll('.highlight-box i, .mini-card i').forEach(el => {
+                    el.style.color = '#c49b6c';
+                });
+                document.querySelectorAll('.content-hero h1, .content-hero .subtitle').forEach(el => {
+                    el.style.color = '#f0ebf5';
+                });
+                document.querySelectorAll('.content-hero .icon-big').forEach(el => {
+                    el.style.color = '#c49b6c';
+                });
+                document.querySelectorAll('.nav a').forEach(el => {
+                    el.style.color = '#c4b8d0';
+                });
+                document.querySelectorAll('.nav a.active, .nav a:hover').forEach(el => {
+                    el.style.color = '#f0ebf5';
+                    el.style.borderBottomColor = '#c49b6c';
+                });
+                document.querySelectorAll('.footer p, .footer__socials a').forEach(el => {
+                    el.style.color = '#8a7a9a';
+                });
+                document.querySelectorAll('.sidebar-links a').forEach(el => {
+                    el.style.color = '#c4b8d0';
+                });
+                document.querySelectorAll('.sidebar-links .group-title').forEach(el => {
+                    el.style.color = '#00CC00';
+                });
+            } else {
+                // СВЕТЛАЯ ТЕМА
+                root.style.setProperty('--bg-primary', '#fcf9f5');
+                root.style.setProperty('--bg-secondary', '#f8f3ed');
+                root.style.setProperty('--bg-card', '#ffffff');
+                root.style.setProperty('--bg-sidebar', '#f5efe9');
+                root.style.setProperty('--text-primary', '#2c241e');
+                root.style.setProperty('--text-secondary', '#6b5d53');
+                root.style.setProperty('--text-muted', '#a39387');
+                root.style.setProperty('--border-color', '#e8ddd2');
+                root.style.setProperty('--shadow-soft', '0 8px 30px rgba(150, 120, 100, 0.08)');
+                root.style.setProperty('--shadow-hover', '0 20px 50px rgba(150, 120, 100, 0.15)');
+                root.style.setProperty('--gradient-warm', 'linear-gradient(145deg, #fcf6ef 0%, #f5ede4 100%)');
+                document.getElementById('header').style.background = 'rgba(252, 249, 245, 0.95)';
+                document.querySelector('.header').style.borderBottomColor = '#e8ddd2';
+                icon.className = 'fas fa-moon';
+
+                document.querySelectorAll('.content-section p, .content-section li, .mini-card p, .reference-list li, .person-item .name, .person-item .years, .stat-item .label, .nav a, .footer p, .footer__socials a, .sidebar-links a').forEach(el => {
+                    el.style.color = '';
+                });
+                document.querySelectorAll('.content-section h2, .content-section h3, .mini-card h4, .stat-item .number, .sidebar-title, .logo, .logo-highlight, .content-hero h1, .content-hero .subtitle, .sidebar-links .group-title').forEach(el => {
+                    el.style.color = '';
+                });
+                document.querySelectorAll('.highlight-box, .quote-block, .mini-card, .stat-item, .person-item').forEach(el => {
+                    el.style.background = '';
+                    el.style.borderColor = '';
+                });
+                document.querySelectorAll('.highlight-box i, .mini-card i, .content-hero .icon-big').forEach(el => {
+                    el.style.color = '';
+                });
+                document.querySelectorAll('.nav a.active, .nav a:hover').forEach(el => {
+                    el.style.color = '';
+                    el.style.borderBottomColor = '';
+                });
+            }
+            isLight = !isLight;
+        });
+        document.querySelectorAll('.nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+
+                const targetId = href.replace('#', '');
+                let target = document.querySelector('a[name="' + targetId + '"]');
+                if (!target) {
+                    target = document.querySelector(href);
+                }
+
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        const scrollBtn = document.getElementById('scrollTopBtn');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        });
+
+        scrollBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        document.querySelectorAll('.sidebar-links a').forEach(item => {
+            if (item.getAttribute('href') === '#') {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('ߌߠЗдесь будет Ваша страница с информацией о религии.\n\nЗамените "#" на путь к Вашему HTML-файлу.');
+                });
+            }
+        });
+        const sections = document.querySelectorAll('.content-section');
+        const navLinks = document.querySelectorAll('.nav a');
+
+        window.addEventListener('scroll', function() {
+            let current = '';
+            const headerHeight = document.querySelector('.header').offsetHeight;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - headerHeight - 50;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        console.log('ߌޠReligioScope загружен!');
+        console.log('ߓ̠В левой и правой колонках — заглушки.');
+        console.log('✏️ Замените ссылки на Ваши HTML-файлы.');
+    </script>
+</body>
 </html>
